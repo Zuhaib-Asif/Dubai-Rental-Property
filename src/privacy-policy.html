@@ -13,16 +13,20 @@
     <header
       class="flex items-center justify-between px-5 py-3 shadow-md text-gold-500 lg:py-7"
     >
-      <div class="divide-gold-500 divide-x flex w-64 xl:w-full" id="left">
+      <a
+        href="index.html"
+        class="divide-x divide-gold-500 flex w-64 xl:w-full"
+        id="left"
+      >
         <img src="images/maas-weber-logo.svg" class="h-11 mr-2 text-gold-500" />
         <div
-          class="flex flex-col font-semibold justify-center px-2 text-[10px]"
+          class="flex flex-col divide-gold-500 font-semibold justify-center px-2 text-[10px]"
         >
           <p>DUBAI</p>
           <p>DÜSSELDORF</p>
           <p>MÜNCHEN</p>
         </div>
-      </div>
+      </a>
       <div id="right">
         <div class="flex justify-end lg:mb-4" id="language">
           <div class="inline-block relative text-left z-50">
@@ -35,8 +39,7 @@
                 src="images/flag-uk.svg"
                 alt="UK flag"
                 class="mr-2 w-5 h-5"
-              />
-              <span id="selectedLanguage">English</span>
+              /><span id="selectedLanguage">English</span>
               <svg
                 class="-mr-1 h-5 ml-2 text-gold-500 w-5"
                 xmlns="http://www.w3.org/2000/svg"
@@ -230,159 +233,150 @@
         </div>
       </div>
     </header>
-    <section class="relative h-96">
-      <img
-        src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGR1YmFpfGVufDB8fHx8MTcxOTMxNjc0OXww&ixlib=rb-4.0.3&q=80&w=1080"
-        alt="Dubai Skyline"
-        class="w-full h-full object-cover"
-      />
+    <section id="hero" class="relative">
+      <img src="./images/dubai-view.jpg" class="w-full h-96 object-cover" />
+
       <div
-        class="absolute inset-0 flex flex-col items-center justify-center text-white text-center"
+        class="-translate-x-1/2 -translate-y-1/2 absolute font-bold left-1/2 text-center text-white top-1/2 transform w-full flex items-center justify-center mb-4 space-x-4"
       >
-        <h1 class="font-light mb-4 text-3xl">
-          Carefully selected properties in
-        </h1>
-        <h2 class="text-4xl md:text-6xl font-bold">DUBAI</h2>
-      </div>
-    </section>
-    <section class="py-8">
-      <div class="container flex items-center justify-center mx-auto px-4">
-        <div class="flex mr-2 overflow-hidden rounded-md shadow space-x-px">
-          <select class="bg-white border-none p-2 w-40">
-            <option>Community</option>
-          </select>
-          <select class="bg-white border-none p-2 w-40">
-            <option>Status</option>
-          </select>
-          <select class="bg-white border-none p-2 w-40">
-            <option>Property type</option>
-          </select>
-          <select class="bg-white border-none p-2 w-40">
-            <option>Price range</option>
-          </select>
-          <select class="bg-white border-none p-2 w-40">
-            <option>Bedrooms</option>
-          </select>
-        </div>
-        <button
-          class="bg-white border-none flex items-center mr-2 p-2 rounded-md w-24"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M6 3a3 3 0 100 6 3 3 0 000-6zM2 6a4 4 0 118 0 4 4 0 01-8 0zm14-3a1 1 0 00-1-1h-3a1 1 0 100 2h2v2a1 1 0 102 0V3zM3 11a1 1 0 011-1h10a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4zM7 15a1 1 0 100-2h6a1 1 0 100 2H7z"
-              clip-rule="evenodd"
-            />
-          </svg>
-          Filters
-        </button>
-        <button
-          class="bg-gold-500 text-white px-4 py-2 rounded-md hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-opacity-50"
-        >
-          Search
-        </button>
-      </div>
-    </section>
-    <section class="py-12">
-      <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center mb-8">
-          <p class="text-white">120 Results</p>
-          <div class="flex items-center">
-            <span class="text-white mr-4">Sort: Most recent</span>
-            <button class="bg-gold-500 text-white px-4 py-2 rounded mr-2">
-              Map view
-            </button>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Property Card -->
-          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-            <img
-              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGR1YmFpfGVufDB8fHx8MTcxOTMxNjc0OXww&ixlib=rb-4.0.3&q=80&w=1080"
-              alt="Property"
-              class="w-full h-48 object-cover"
-            />
-            <div class="p-6">
-              <h3 class="font-bold text-xl mb-2">
-                Highlight 1 | Highlight 2 | Highlight 3
-              </h3>
-              <p class="text-gray-700 text-base mb-4">
-                AED 2,300,000 | EUR 575,000
-              </p>
-              <p class="text-gray-600 text-sm mb-4">
-                Estimated monthly mortgage payment AED 10,000 | EUR 2,500
-              </p>
-              <p class="flex items-center text-gray-600 text-sm mb-4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-4 w-4 mr-2"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-                Building Name, Community, City
-              </p>
-              <div class="flex justify-between items-center mb-4">
-                <span class="text-gray-600 text-sm">2 Beds</span
-                ><span class="text-gray-600 text-sm">2 Baths</span
-                ><span class="text-gray-600 text-sm">101 Sqm</span>
-              </div>
-              <p class="text-gray-600 text-sm mb-4">
-                Expected rental yield: 8%-9%
-              </p>
-              <div class="flex justify-between">
-                <button class="bg-gold-500 text-white px-4 py-2 rounded">
-                  Call
-                </button>
-                <button class="bg-gold-500 text-white px-4 py-2 rounded">
-                  Whatsapp
-                </button>
-                <button class="bg-gold-500 text-white px-4 py-2 rounded">
-                  Email
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- Repeat property card for more listings -->
-        </div>
-      </div>
-    </section>
-    <section class="bg-mwblack-400 py-12">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-white text-3xl font-bold mb-8">
-          Can't find what you are looking for?
+        <div class="flex-grow border-t border-white"></div>
+        <h2 class="font-bold text-3xl text-white text-center whitespace-nowrap">
+          PRIVACY POLICY
         </h2>
-        <div class="flex flex-wrap justify-center gap-4">
-          <button class="bg-gold-500 text-white px-6 py-3 rounded">
-            Give us a call
-          </button>
-          <button class="bg-gold-500 text-white px-6 py-3 rounded">
-            Whatsapp us
-          </button>
-          <button class="bg-gold-500 text-white px-6 py-3 rounded">
-            Send us your request
-          </button>
+        <div class="flex-grow border-t border-white"></div>
+      </div>
+    </section>
+
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="w-full">
+          <div class="mb-4">
+            <span class="font-bold mb-4 text-gold-500 text-xl"
+              >PRIVACY POLICY</span
+            >
+            <br />
+            <span class="text-white mb-4"
+              >Maas & Weber International Real Estate Broker LLC is committed to
+              protecting your privacy. This Privacy Policy explains how we
+              collect, use, disclose, and safeguard your information when you
+              visit our website or use our services.
+            </span>
+          </div>
+          <ul>
+            <li class="list-decimal text-white mb-4 list-inside">
+              Personally Identifiable Information (PII). PII, as described in
+              UAE privacy law and information security, is information that can
+              be used on its own or with other information to identify, contact,
+              or locate a single person, or to identify an individual in
+              context. Please read our privacy policy carefully to understand
+              how we handle your PII.
+            </li>
+            <li class="list-decimal text-white mb-4 list-inside">
+              Information we collect. We may collect the following types of
+              information:
+              <ul>
+                <li class="list-disc list-inside ml-5">Name</li>
+                <li class="list-disc list-inside ml-5">Email Address</li>
+                <li class="list-disc list-inside ml-5">Phone Number</li>
+                <li class="list-disc list-inside ml-5">
+                  Other details you provide to enhance your experience
+                </li>
+              </ul>
+              <p class="ml-5 mt-5">We collect this information when you:</p>
+              <ul>
+                <li class="list-disc list-inside ml-5">
+                  Subscribe to our newsletter
+                </li>
+                <li class="list-disc list-inside ml-5">Fill out a form</li>
+                <li class="list-disc list-inside ml-5">Use Live Chat</li>
+                <li class="list-disc list-inside ml-5">
+                  Enter information on our site
+                </li>
+              </ul>
+            </li>
+            <li class="list-decimal text-white mb-4 list-inside">
+              How we use your information. We use the information we collect for
+              various purposes, including:
+              <ul>
+                <li class="list-disc list-inside ml-5">
+                  To improve our customer service
+                </li>
+                <li class="list-disc list-inside ml-5">
+                  To personalize your experience
+                </li>
+                <li class="list-disc list-inside ml-5">
+                  To improve our website
+                </li>
+                <li class="list-disc list-inside ml-5">
+                  To send periodic emails about our services, offers, or updates
+                </li>
+                <li class="list-disc list-inside ml-5">
+                  To follow up after correspondence (live chat, email, or phone
+                  inquiries)
+                </li>
+              </ul>
+            </li>
+            <li class="list-decimal text-white mb-4 list-inside">
+              Protection Children’s Privacy. We do not knowingly collect
+              personal information from children under 13. If you are under 13,
+              please do not provide any personal information on this website.
+            </li>
+            <li class="list-decimal text-white mb-4 list-inside">
+              Fair Information Practices. We adhere to Fair Information Practice
+              Principles, which form the backbone privacy law in many countries.
+              These principles include:
+              <ul>
+                <li class="list-disc list-inside ml-5">Notice</li>
+                <li class="list-disc list-inside ml-5">Choice</li>
+                <li class="list-disc list-inside ml-5">Access</li>
+                <li class="list-disc list-inside ml-5">Security</li>
+                <li class="list-disc list-inside ml-5">Enforcement</li>
+              </ul>
+            </li>
+            <li class="list-decimal text-white mb-4 list-inside">
+              Email Communications. If you choose to receive emails from us, you
+              can unsubscribe at any time by clicking the unsubscribe link at
+              the bottom of our emails or by contacting us directly.
+            </li>
+            <li class="list-decimal text-white mb-4 list-inside">
+              Data Security. We implement a variety of security measures to
+              maintain the safety of your personal information. However, no
+              method of transmission over the internet or electronic storage is
+              100% secure, so we cannot guarantee absolute security.
+            </li>
+            <li class="list-decimal text-white mb-4 list-inside">
+              Changes to This Privacy Policy. We may update our Privacy Policy
+              from time to time. We will notify you of any changes by posting
+              the new Privacy Policy on this page and updating the “Last
+              Updated” date.
+            </li>
+            <li class="list-decimal text-white mb-4 list-inside">
+              Your Acceptance of These Terms. By using our website, you signify
+              your acceptance of this Privacy Policy. If you do not agree to
+              this policy, please do not use our site.
+            </li>
+            <li class="list-decimal text-white mb-4 list-inside">
+              Contacting us. If you have any questions about this Privacy
+              Policy, please contact us at:
+            </li>
+          </ul>
+          <div class="leading-5 ml-5">
+            <p class="text-white font-bold">
+              Maas & Weber International Real Estate Broker LLC
+            </p>
+            <p class="text-white">
+              Emaar Square, Building 6, Level 702
+              <br />
+              Burj Khalifa Community, Dubai, UAE
+            </p>
+            <p class="text-white">Email: info@mwrealestatebroker.com</p>
+            <p class="text-white">Phone: +971 0000000000</p>
+          </div>
+          <p class="text-white mt-4">Last updated: 01.08.2024</p>
         </div>
       </div>
     </section>
+
     <footer class="py-12">
       <div class="bg-gold-500 p-5">
         <div

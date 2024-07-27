@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Maas & Weber International Real Estate Broker</title>
+    <link href="./output.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="bg-mwblack-500 font-sans text-gray-900">
+    <header
+      class="flex items-center justify-between px-5 py-3 shadow-md text-gold-500 lg:py-7"
+    >
+      <a
+        href="index.html"
+        class="divide-x divide-gold-500 flex w-64 xl:w-full"
+        id="left"
+      >
+        <img src="images/maas-weber-logo.svg" class="h-11 mr-2 text-gold-500" />
+        <div
+          class="flex flex-col divide-gold-500 font-semibold justify-center px-2 text-[10px]"
+        >
+          <p>DUBAI</p>
+          <p>DÜSSELDORF</p>
+          <p>MÜNCHEN</p>
+        </div>
+      </a>
+      <div id="right">
+        <div class="flex justify-end lg:mb-4" id="language">
+          <div class="inline-block relative text-left z-50">
+            <button
+              id="languageButton"
+              class="focus:outline-none font-medium hover:bg-mwblack-500 inline-flex items-center justify-center py-2 rounded-md shadow-sm text-sm w-full"
+            >
+              <img
+                id="selectedFlag"
+                src="images/flag-uk.svg"
+                alt="UK flag"
+                class="mr-2 w-5 h-5"
+              /><span id="selectedLanguage">English</span>
+              <svg
+                class="-mr-1 h-5 ml-2 text-gold-500 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div
+              id="languageDropdown"
+              class="absolute bg-mwblack-500 focus:outline-none hidden right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg w-56"
+            >
+              <div class="py-1" role="menu" aria-orientation="vertical">
+                <button
+                  class="block hover:bg-mwblack-500 px-4 py-2 text-left text-sm w-full"
+                  role="menuitem"
+                  data-lang="English"
+                  data-flag="images/flag-uk.svg"
+                >
+                  <img
+                    src="images/flag-uk.svg"
+                    alt="UK flag"
+                    class="mr-2 inline-block w-5 h-5"
+                  />
+                  English
+                </button>
+                <button
+                  class="block hover:bg-mwblack-500 px-4 py-2 text-left text-sm w-full"
+                  role="menuitem"
+                  data-lang="Deutsch"
+                  data-flag="images/flag-de.svg"
+                >
+                  <img
+                    src="images/flag-de.svg"
+                    alt="German flag"
+                    class="mr-2 inline-block w-5 h-5"
+                  />
+                  Deutsch
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="bg-mwblack-500 relative">
+          <div class="flex justify-end">
+            <!-- Burger menu button (visible on mobile, hidden on lg and above) -->
+            <button
+              id="burger-menu"
+              class="focus:outline-none hover:text-gray-300 lg:hidden text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                class="h-7 w-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                  class="burger-icon"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                  class="close-icon hidden"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Desktop menu (hidden on mobile, visible on lg and above) -->
+          <ul
+            class="hidden items-center justify-end space-x-4 text-sm uppercase lg:flex"
+          >
+            <li>
+              <a
+                href="#buy"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Buy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sell"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Sell</a
+              >
+            </li>
+            <li>
+              <a
+                href="#guides"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Guides</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#european-properties"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >European Properties</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="bg-gold-500 duration-300 hover:bg-gold-400 p-2 rounded-md text-white transform truncate"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div
+          id="mobile-menu"
+          class="bg-mwblack-500 bg-opacity-90 bottom-0 fixed hidden pt-4 right-0 top-20 w-96 z-30"
+        >
+          <ul class="text-center text-sm uppercase">
+            <li>
+              <a
+                href="#buy"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Buy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sell"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Sell</a
+              >
+            </li>
+            <li>
+              <a
+                href="#guides"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Guides</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#european-properties"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >European Properties</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section id="hero" class="relative">
+      <img src="./images/dubai-view.jpg" class="w-full h-96 object-cover" />
+
+      <div
+        class="-translate-x-1/2 -translate-y-1/2 absolute font-bold left-1/2 text-center text-white top-1/2 transform w-full flex items-center justify-center mb-4 space-x-4"
+      >
+        <div class="flex-grow border-t border-white"></div>
+        <h2 class="font-bold text-3xl text-white text-center whitespace-nowrap">
+          CONTACT
+        </h2>
+        <div class="flex-grow border-t border-white"></div>
+      </div>
+    </section>
+
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="w-full">
+          <div class="mb-4">
+            <span class="font-bold mb-4 text-gold-500 text-xl">DREAMING </span>
+            <span class="text-white mb-4"
+              >on your investment journey by filling out the form below. Whether
+              you’re looking to buy, sell, or explore the dynamic Dubai real
+              estate market, our team of seasoned professionals is ready to
+              guide you every step of the way.</span
+            >
+          </div>
+          <p class="text-white mb-8">
+            At Maas & Weber, we pride ourselves on our personalized approach and
+            deep understanding of both the local market and international
+            investors needs.
+          </p>
+          <p class="text-white mb-8">
+            Have a question about Dubai real estate? Fill out the contact form
+            below and start your investment journey today.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-10 p-5">
+      <div
+        class="flex flex-col lg:flex-row gap-20 xl:gap-40 container mx-auto px-4"
+      >
+        <form class="w-full lg:w-5/6 xl:w-5/12 space-y-4">
+          <div class="gap-5 sm:flex">
+            <div class="text-base text-left font-normal w-full">
+              <label class="text-white" for="">Name</label>
+              <br />
+              <input
+                class="text-black mt-2 py-3 px-4 rounded-lg w-full"
+                type="text"
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div class="text-base text-left font-normal w-full">
+              <label class="text-white" for="">Email</label>
+              <br />
+              <input
+                class="text-black mt-2 py-3 px-4 rounded-lg w-full"
+                type="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+          </div>
+          <div class="gap-5 sm:flex">
+            <div class="text-base text-left font-normal w-full">
+              <label class="text-white" for="">Phone Number</label>
+              <br />
+              <input
+                class="text-black mt-2 py-3 px-4 rounded-lg w-full"
+                type="tel"
+                placeholder="+971"
+                required
+              />
+            </div>
+            <div class="text-base text-left font-normal w-full">
+              <label class="text-white" for="">Preferred language</label>
+              <br />
+              <select
+                name=""
+                id=""
+                class="text-black mt-2 py-3 px-4 rounded-lg w-full"
+              >
+                <option value="English">English</option>
+                <option value="German">German</option>
+              </select>
+            </div>
+          </div>
+          <div class="flex gap-5">
+            <div class="text-base text-left font-normal w-full">
+              <label class="text-white" for="">Message</label>
+              <br />
+              <textarea
+                name=""
+                id=""
+                class="text-black mt-2 py-3 px-4 rounded-lg w-full"
+                placeholder=""
+                rows="4"
+              ></textarea>
+            </div>
+          </div>
+          <div class="gap-5 sm:flex">
+            <div class="text-base text-left font-normal w-full">
+              <label class="text-white" for="">Preferred Call-Back Date</label>
+              <br />
+              <input
+                class="text-black mt-2 py-3 px-4 rounded-lg w-full"
+                type="date"
+              />
+            </div>
+            <div class="text-base text-left font-normal w-full">
+              <label class="text-white" for=""
+                >Preferred Call-Back Time (GST)</label
+              >
+              <br />
+              <input
+                class="text-black mt-2 py-3 px-4 rounded-lg w-full"
+                type="time"
+              />
+            </div>
+          </div>
+          <div class="flex gap-5">
+            <button
+              class="bg-gold-500 duration-300 font-semibold hover:bg-gold-400 px-6 py-4 rounded-lg text-lg text-white transform w-full"
+            >
+              <p>Submit</p>
+            </button>
+          </div>
+          <p class="text-white font-normal text-sm leading-4 text-left">
+            By submitting the form, you agree to our
+            <a class="underline font-bold" href="#">Terms & Conditions</a> and
+            <a class="underline font-bold" href="#">Privacy Policy.</a>
+          </p>
+        </form>
+        <div class="space-y-7">
+          <div class="text-white flex gap-5 sm:gap-10">
+            <svg
+              class="w-12 sm:w-[60px]"
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="60" height="60" fill="url(#pattern0_203_7)" />
+              <defs>
+                <pattern
+                  id="pattern0_203_7"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use xlink:href="#image0_203_7" transform="scale(0.01)" />
+                </pattern>
+                <image
+                  id="image0_203_7"
+                  width="100"
+                  height="100"
+                  xlink:href="data:image/png;base64,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"
+                />
+              </defs>
+            </svg>
+            <div>
+              <p class="text-base font-bold text-left leading-5">Phone</p>
+              <p class="text-base font-normal leading-5">
+                +971 58 178 5225 (UAE Number)
+              </p>
+              <p class="text-base font-normal leading-5">
+                +49 151 647 09 700 (DE Number)
+              </p>
+            </div>
+          </div>
+          <div class="text-white flex gap-5 sm:gap-10">
+            <svg
+              class="w-12 sm:w-[60px]"
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="60" height="60" fill="url(#pattern0_203_6)" />
+              <defs>
+                <pattern
+                  id="pattern0_203_6"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use xlink:href="#image0_203_6" transform="scale(0.01)" />
+                </pattern>
+                <image
+                  id="image0_203_6"
+                  width="100"
+                  height="100"
+                  xlink:href="data:image/png;base64,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"
+                />
+              </defs>
+            </svg>
+            <div>
+              <p class="font-bold text-left leading-5">WhatsApp</p>
+              <a
+                class="text-base underline font-bold"
+                href="//api.whatsapp.com/send?phone=971MOBILE_NUMBER&text=WHATEVER_LINK_OR_TEXT_YOU_WANT_TO_SEND"
+                >Click to WhatsApp</a
+              >
+            </div>
+          </div>
+          <div class="text-white flex gap-5 sm:gap-10">
+            <svg
+              class="w-12 sm:w-[60px]"
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="60" height="60" fill="url(#pattern0_203_8)" />
+              <defs>
+                <pattern
+                  id="pattern0_203_8"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use xlink:href="#image0_203_8" transform="scale(0.01)" />
+                </pattern>
+                <image
+                  id="image0_203_8"
+                  width="100"
+                  height="100"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFX0lEQVR4nO2bZ2wcRRSAh957712AAFGCIIDgSO69PQMhgJARiCYEROIXP/lpfkZI/LBIYr+3NkZBCDAIksj4ZvaCTAdRRQ1FQOi9JUASCBiNpT0Mnj2fr+3s+n2SJf+43ZnZb+bNzJtdpQRBEARBEARBEARBEARBEIQcYBjH5Q+9eQYihNOXIEI4/QcvQjijQtKe02YbIsQzRIhniBDPECFZE6IJ7hge7t4q7YrmHfuM7bOuax+iGZ5cHc7fL+1K55XKXcW9DEE0s40hwWeG8My0K583KgPFUzXBRw1uDGFjRHBT2o3ICybEawzDb83v1AloeLh727QblFXGegpbG8LFDe3UNcPShNHybDQAB6bduKxhn5l9dglz9dK6Uieag6udQ4vgW8M4P+1GZgUT4jmG4cupK1ncYBhvnPhNvbksw3iKa/LRjH9qhttSbWkGMGGwyBBscnTqT3UYnFH93UySi3Z5phlMQry7bxUt2DGV1nrM2FBhe8Mw6A5R+IRZhvtO/v2MhMQbGEN4u2H4a+rQg9cqg8UjO9pij9F3B4cYxhcdIepvzdBrJ/f/XzNjIdUL+/FizfizYwj+EDGU1CynHBbP1wzfOEbF+oiwO+m6hoVMFDpQOtYwvu3qAXZZ19PTs6WaZYyPqy3snGoINjtkvG8G8MRa1zclxLJiYOEuhvFhZ4wkWFUh2E3NEsaWFHbWBA8lzLEjY0OF3ae7R9NCpu0VhO+VuXSCyjlRHxxjCN5qNlq0REiM7i922TnEMa+s01S8XOUUzcECTfjT1FEBv5S5eMlM7tVSIZYKwaGa8aWknpKnVP54HBkcK05D+PoozTtqpvdsuZB47a0JhhJiaVmHwZ4q44z2du1qCFc4506G+81y3KmR+7ZFSPXmYbBIM/7hWG18EvXD6Sqj6L7gZE34YTuyFm0VYilz6VzD+JUjhG3QIdygMkbEcJUm+NUh47uoH4rN3r/tQiyr++YfpAmfd4YwAnqZ5myjMp0yh1dGBuYd1opyOiLEMtrbtZ1NF7hjLj49sqSwv/KUMSrsrQkeT5gTlz9359wdWlVWx4TElAmu1Yy/O6R8Xu4vnqU8w4TBHEO41jEqNmqGm1teXqeFWMpUOs0wfOxqZERwq/IEzcXrkjpPxDC3HWWmIiQOA4ax0okw0Eh4NYScMOc91c7wmpqQSan8xRObRsdEWe4rHa46TNoLkFSFVCtBeGXSUrJMRehEHSbq0Y/nJS3RDeH1HamDD0IsmoLjDMMaR6/cbDdbNk3RzvKTNrGG4IMKwUntLNtLIdV0BMOjCeHigUbTEdOmeRjucS/HYXRk2UV7qA7ilZBpE3YMa+xIalVZOgyO1oxv+HTA5p2QmCiEC5NS2pqCS5u9vyG8wDD86BiJ6wzjZa1pRY6EVHswwZut7MG1U+bwbhTC8SpFvBYSH4sawgedMZ7wsXqORScfN2uCR9zzBa704bjZeyH1rIKme3EgfiFDE76T1ioud0LifYIm/NrRu9eXGa5QCUQEC12vLGnG73UYoPKITAmxjHLXwZrhhXp20rUyAZrwVcN4hPKMzAn5N5WPYa2vvWp9laQJ7vX1tddMConRBLe4X2DGtc6UOcEme43ymEwLsdizeXtG7wxh/w1RX2gKzlaek3khltHBrn1qnOjZEPVMmUoHqAyQCyE1z7wz9vldboTE2K+97Ime/WrY/q8yRu6EZB0R4hkixDNEiGeIEM8QIZ4hQjxDhHiGCPEMEeIZIsQzRIhniBDPECGeIUI8Q4R4hgjxDBGSNSHyh6k+AxHCfnVCEcLpSxAh7LEQQRAEQRAEQRAEQRAEQRAEQWWffwCmg/uHb+nkswAAAABJRU5ErkJggg=="
+                />
+              </defs>
+            </svg>
+            <div>
+              <p class="font-bold text-left leading-5">Email</p>
+              <p class="font-base font-normal leading-5">
+                info@mwrealestatebroker.com
+              </p>
+            </div>
+          </div>
+          <div class="text-white flex gap-5 sm:gap-10">
+            <svg
+              class="w-12 sm:w-[60px]"
+              width="60"
+              height="60"
+              viewBox="0 0 60 60"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="60" height="60" fill="url(#pattern0_203_9)" />
+              <defs>
+                <pattern
+                  id="pattern0_203_9"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use xlink:href="#image0_203_9" transform="scale(0.01)" />
+                </pattern>
+                <image
+                  id="image0_203_9"
+                  width="100"
+                  height="100"
+                  xlink:href="data:image/png;base64,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"
+                />
+              </defs>
+            </svg>
+            <div>
+              <p class="font-bold text-left leading-5">Dubai Office Address</p>
+              <p class="font-base font-normal leading-5">
+                Emaar Square, Building 6, Level 702 Burj Khalifa Community,
+                Dubai, UAE
+              </p>
+            </div>
+          </div>
+          <div class="text-white flex gap-10">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.0510566991743!2d55.27188807402509!3d25.201500631528937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f42814badd589%3A0x12cde8b6bf287f84!2sEmaar%20Square%2C%20Building%206!5e0!3m2!1sen!2s!4v1722070083228!5m2!1sen!2s"
+              width="100%"
+              height="220"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-12">
+      <div class="bg-gold-500 p-5">
+        <div
+          class="gap-8 grid grid-cols-1 max-w-6xl mx-auto px-4 text-sm md:grid-cols-3"
+        >
+          <div>
+            <h3 class="text-xl font-bold">BUY</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/off-plan-properties">READY PROPERTIES</a>
+              </li>
+              <li>
+                <a href="/secondary-market-properties">OFF PLAN PROPERTIES</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">SELL</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/dubai-buyers-guide">LIST YOUR PROPERTY</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">GUIDES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">COMMUNITIES IN DUBAI</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">BUYERS GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">SELLERS GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">LANDLORD GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">MORTGAGE GUIDE</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">SERVICES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">RENTAL SERVICE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">MORTGAGE SERVICE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">LEGAL SERVICE</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">EUROPEAN PROPERTIES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">PROPERTIES TO SELL</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">ABOUT</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">ABOUT US</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">CAREER</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-extralight max-w-6xl mt-8 mx-auto px-4 text-center text-gold-500 text-sm w-full md:mt-12"
+      >
+        <p class="mb-2">
+          <a href="/terms-and-conditions">Terms and Conditions</a> |
+          <a href="/privacy-policy">Privacy Policy</a> |
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/contact">Contact</a>
+        </p>
+        <p class="mb-2">
+          © 2024 Maas & Weber International Real Estate Broker LLC, All rights
+          reserved.
+        </p>
+        <p>
+          A limited liability company with a registered office in Dubai UAE.
+          Registration number: 1123095
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
