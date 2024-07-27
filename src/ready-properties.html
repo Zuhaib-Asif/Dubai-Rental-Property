@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Maas & Weber International Real Estate Broker</title>
+    <link href="tailwind_theme/tailwind.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="bg-mwblack-500 font-sans text-gray-900">
+    <header
+      class="flex items-center justify-between px-5 py-3 shadow-md text-gold-500 lg:py-7"
+    >
+      <div class="divide-gold-500 divide-x flex w-64 xl:w-full" id="left">
+        <img src="images/maas-weber-logo.svg" class="h-11 mr-2 text-gold-500" />
+        <div
+          class="flex flex-col font-semibold justify-center px-2 text-[10px]"
+        >
+          <p>DUBAI</p>
+          <p>DÜSSELDORF</p>
+          <p>MÜNCHEN</p>
+        </div>
+      </div>
+      <div id="right">
+        <div class="flex justify-end lg:mb-4" id="language">
+          <div class="inline-block relative text-left z-50">
+            <button
+              id="languageButton"
+              class="focus:outline-none font-medium hover:bg-mwblack-500 inline-flex items-center justify-center py-2 rounded-md shadow-sm text-sm w-full"
+            >
+              <img
+                id="selectedFlag"
+                src="images/flag-uk.svg"
+                alt="UK flag"
+                class="mr-2 w-5 h-5"
+              />
+              <span id="selectedLanguage">English</span>
+              <svg
+                class="-mr-1 h-5 ml-2 text-gold-500 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div
+              id="languageDropdown"
+              class="absolute bg-mwblack-500 focus:outline-none hidden right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg w-56"
+            >
+              <div class="py-1" role="menu" aria-orientation="vertical">
+                <button
+                  class="block hover:bg-mwblack-500 px-4 py-2 text-left text-sm w-full"
+                  role="menuitem"
+                  data-lang="English"
+                  data-flag="images/flag-uk.svg"
+                >
+                  <img
+                    src="images/flag-uk.svg"
+                    alt="UK flag"
+                    class="mr-2 inline-block w-5 h-5"
+                  />
+                  English
+                </button>
+                <button
+                  class="block hover:bg-mwblack-500 px-4 py-2 text-left text-sm w-full"
+                  role="menuitem"
+                  data-lang="Deutsch"
+                  data-flag="images/flag-de.svg"
+                >
+                  <img
+                    src="images/flag-de.svg"
+                    alt="German flag"
+                    class="mr-2 inline-block w-5 h-5"
+                  />
+                  Deutsch
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="bg-mwblack-500 relative">
+          <div class="flex justify-end">
+            <!-- Burger menu button (visible on mobile, hidden on lg and above) -->
+            <button
+              id="burger-menu"
+              class="focus:outline-none hover:text-gray-300 lg:hidden text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                class="h-7 w-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                  class="burger-icon"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                  class="close-icon hidden"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Desktop menu (hidden on mobile, visible on lg and above) -->
+          <ul
+            class="hidden items-center justify-end space-x-4 text-sm uppercase lg:flex"
+          >
+            <li>
+              <a
+                href="#buy"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Buy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sell"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Sell</a
+              >
+            </li>
+            <li>
+              <a
+                href="#guides"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Guides</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#european-properties"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >European Properties</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="bg-gold-500 duration-300 hover:bg-gold-400 p-2 rounded-md text-white transform truncate"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div
+          id="mobile-menu"
+          class="bg-mwblack-500 bg-opacity-90 bottom-0 fixed hidden pt-4 right-0 top-20 w-96 z-30"
+        >
+          <ul class="text-center text-sm uppercase">
+            <li>
+              <a
+                href="#buy"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Buy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sell"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Sell</a
+              >
+            </li>
+            <li>
+              <a
+                href="#guides"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Guides</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#european-properties"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >European Properties</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="relative h-96">
+      <img
+        src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGR1YmFpfGVufDB8fHx8MTcxOTMxNjc0OXww&ixlib=rb-4.0.3&q=80&w=1080"
+        alt="Dubai Skyline"
+        class="w-full h-full object-cover"
+      />
+      <div
+        class="absolute inset-0 flex flex-col items-center justify-center text-white text-center"
+      >
+        <h1 class="font-light mb-4 text-3xl">
+          Carefully selected properties in
+        </h1>
+        <h2 class="text-4xl md:text-6xl font-bold">DUBAI</h2>
+      </div>
+    </section>
+    <section class="py-8">
+      <div class="container flex items-center justify-center mx-auto px-4">
+        <div class="flex mr-2 overflow-hidden rounded-md shadow space-x-px">
+          <select class="bg-white border-none p-2 w-40">
+            <option>Community</option>
+          </select>
+          <select class="bg-white border-none p-2 w-40">
+            <option>Status</option>
+          </select>
+          <select class="bg-white border-none p-2 w-40">
+            <option>Property type</option>
+          </select>
+          <select class="bg-white border-none p-2 w-40">
+            <option>Price range</option>
+          </select>
+          <select class="bg-white border-none p-2 w-40">
+            <option>Bedrooms</option>
+          </select>
+        </div>
+        <button
+          class="bg-white border-none flex items-center mr-2 p-2 rounded-md w-24"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M6 3a3 3 0 100 6 3 3 0 000-6zM2 6a4 4 0 118 0 4 4 0 01-8 0zm14-3a1 1 0 00-1-1h-3a1 1 0 100 2h2v2a1 1 0 102 0V3zM3 11a1 1 0 011-1h10a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4zM7 15a1 1 0 100-2h6a1 1 0 100 2H7z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          Filters
+        </button>
+        <button
+          class="bg-gold-500 text-white px-4 py-2 rounded-md hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-opacity-50"
+        >
+          Search
+        </button>
+      </div>
+    </section>
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center mb-8">
+          <p class="text-white">120 Results</p>
+          <div class="flex items-center">
+            <span class="text-white mr-4">Sort: Most recent</span>
+            <button class="bg-gold-500 text-white px-4 py-2 rounded mr-2">
+              Map view
+            </button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Property Card -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGR1YmFpfGVufDB8fHx8MTcxOTMxNjc0OXww&ixlib=rb-4.0.3&q=80&w=1080"
+              alt="Property"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h3 class="font-bold text-xl mb-2">
+                Highlight 1 | Highlight 2 | Highlight 3
+              </h3>
+              <p class="text-gray-700 text-base mb-4">
+                AED 2,300,000 | EUR 575,000
+              </p>
+              <p class="text-gray-600 text-sm mb-4">
+                Estimated monthly mortgage payment AED 10,000 | EUR 2,500
+              </p>
+              <p class="flex items-center text-gray-600 text-sm mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-4 w-4 mr-2"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                Building Name, Community, City
+              </p>
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-gray-600 text-sm">2 Beds</span
+                ><span class="text-gray-600 text-sm">2 Baths</span
+                ><span class="text-gray-600 text-sm">101 Sqm</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-4">
+                Expected rental yield: 8%-9%
+              </p>
+              <div class="flex justify-between">
+                <button class="bg-gold-500 text-white px-4 py-2 rounded">
+                  Call
+                </button>
+                <button class="bg-gold-500 text-white px-4 py-2 rounded">
+                  Whatsapp
+                </button>
+                <button class="bg-gold-500 text-white px-4 py-2 rounded">
+                  Email
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat property card for more listings -->
+        </div>
+      </div>
+    </section>
+    <section class="bg-mwblack-400 py-12">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-white text-3xl font-bold mb-8">
+          Can't find what you are looking for?
+        </h2>
+        <div class="flex flex-wrap justify-center gap-4">
+          <button class="bg-gold-500 text-white px-6 py-3 rounded">
+            Give us a call
+          </button>
+          <button class="bg-gold-500 text-white px-6 py-3 rounded">
+            Whatsapp us
+          </button>
+          <button class="bg-gold-500 text-white px-6 py-3 rounded">
+            Send us your request
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer class="py-12">
+      <div class="bg-gold-500 p-5">
+        <div
+          class="gap-8 grid grid-cols-1 max-w-6xl mx-auto px-4 text-sm md:grid-cols-3"
+        >
+          <div>
+            <h3 class="text-xl font-bold">BUY</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/off-plan-properties">READY PROPERTIES</a>
+              </li>
+              <li>
+                <a href="/secondary-market-properties">OFF PLAN PROPERTIES</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">SELL</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/dubai-buyers-guide">LIST YOUR PROPERTY</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">GUIDES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">COMMUNITIES IN DUBAI</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">BUYERS GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">SELLERS GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">LANDLORD GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">MORTGAGE GUIDE</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">SERVICES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">RENTAL SERVICE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">MORTGAGE SERVICE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">LEGAL SERVICE</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">EUROPEAN PROPERTIES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">PROPERTIES TO SELL</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">ABOUT</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">ABOUT US</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">CAREER</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-extralight max-w-6xl mt-8 mx-auto px-4 text-center text-gold-500 text-sm w-full md:mt-12"
+      >
+        <p class="mb-2">
+          <a href="/terms-and-conditions">Terms and Conditions</a> |
+          <a href="/privacy-policy">Privacy Policy</a> |
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/contact">Contact</a>
+        </p>
+        <p class="mb-2">
+          © 2024 Maas & Weber International Real Estate Broker LLC, All rights
+          reserved.
+        </p>
+        <p>
+          A limited liability company with a registered office in Dubai UAE.
+          Registration number: 1123095
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Maas & Weber International Real Estate Broker</title>
+    <link href="./output.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="bg-mwblack-500 font-sans text-gray-900">
+    <header
+      class="flex items-center justify-between px-5 py-3 shadow-md text-gold-500 lg:py-7"
+    >
+      <a
+        href="index.html"
+        class="divide-x divide-gold-500 flex w-64 xl:w-full"
+        id="left"
+      >
+        <img src="images/maas-weber-logo.svg" class="h-11 mr-2 text-gold-500" />
+        <div
+          class="flex flex-col divide-gold-500 font-semibold justify-center px-2 text-[10px]"
+        >
+          <p>DUBAI</p>
+          <p>DÜSSELDORF</p>
+          <p>MÜNCHEN</p>
+        </div>
+      </a>
+      <div id="right">
+        <div class="flex justify-end lg:mb-4" id="language">
+          <div class="inline-block relative text-left z-50">
+            <button
+              id="languageButton"
+              class="focus:outline-none font-medium hover:bg-mwblack-500 inline-flex items-center justify-center py-2 rounded-md shadow-sm text-sm w-full"
+            >
+              <img
+                id="selectedFlag"
+                src="images/flag-uk.svg"
+                alt="UK flag"
+                class="mr-2 w-5 h-5"
+              /><span id="selectedLanguage">English</span>
+              <svg
+                class="-mr-1 h-5 ml-2 text-gold-500 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div
+              id="languageDropdown"
+              class="absolute bg-mwblack-500 focus:outline-none hidden right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg w-56"
+            >
+              <div class="py-1" role="menu" aria-orientation="vertical">
+                <button
+                  class="block hover:bg-mwblack-500 px-4 py-2 text-left text-sm w-full"
+                  role="menuitem"
+                  data-lang="English"
+                  data-flag="images/flag-uk.svg"
+                >
+                  <img
+                    src="images/flag-uk.svg"
+                    alt="UK flag"
+                    class="mr-2 inline-block w-5 h-5"
+                  />
+                  English
+                </button>
+                <button
+                  class="block hover:bg-mwblack-500 px-4 py-2 text-left text-sm w-full"
+                  role="menuitem"
+                  data-lang="Deutsch"
+                  data-flag="images/flag-de.svg"
+                >
+                  <img
+                    src="images/flag-de.svg"
+                    alt="German flag"
+                    class="mr-2 inline-block w-5 h-5"
+                  />
+                  Deutsch
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="bg-mwblack-500 relative">
+          <div class="flex justify-end">
+            <!-- Burger menu button (visible on mobile, hidden on lg and above) -->
+            <button
+              id="burger-menu"
+              class="focus:outline-none hover:text-gray-300 lg:hidden text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                class="h-7 w-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                  class="burger-icon"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                  class="close-icon hidden"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Desktop menu (hidden on mobile, visible on lg and above) -->
+          <ul
+            class="hidden items-center justify-end space-x-4 text-sm uppercase lg:flex"
+          >
+            <li>
+              <a
+                href="#buy"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Buy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sell"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Sell</a
+              >
+            </li>
+            <li>
+              <a
+                href="#guides"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Guides</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#european-properties"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >European Properties</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="bg-gold-500 duration-300 hover:bg-gold-400 p-2 rounded-md text-white transform truncate"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div
+          id="mobile-menu"
+          class="bg-mwblack-500 bg-opacity-90 bottom-0 fixed hidden pt-4 right-0 top-20 w-96 z-30"
+        >
+          <ul class="text-center text-sm uppercase">
+            <li>
+              <a
+                href="#buy"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Buy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sell"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Sell</a
+              >
+            </li>
+            <li>
+              <a
+                href="#guides"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Guides</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#european-properties"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >European Properties</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section id="hero" class="relative">
+      <img
+        src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGR1YmFpfGVufDB8fHx8MTcxOTMxNjc0OXww&ixlib=rb-4.0.3&q=80&w=1080"
+        class="w-full h-96 object-cover"
+      />
+      <h1
+        class="-translate-x-1/2 -translate-y-1/2 absolute font-bold left-1/2 text-2xl text-center text-white top-1/2 transform w-4/5 xl:text-3xl"
+      >
+        Your trusted Real Estate Partner in the Middle East:<br />Handpicked
+        Excellence, Prifessional Approach
+      </h1>
+      <div
+        class="-translate-x-1/2 absolute bottom-0 flex gap-8 justify-center left-1/2 mb-10 transform w-full"
+        id="buttons"
+      >
+        <button
+          class="bg-gold-500 border border-white duration-300 font-semibold hover:bg-gold-400 p-4 rounded-lg text-base text-white transform sm:px-6 sm:text-lg"
+        >
+          Ready Properties
+        </button>
+        <button
+          class="bg-gold-500 border border-white duration-300 font-semibold hover:bg-gold-400 p-4 rounded-lg text-base text-white transform sm:px-6 sm:text-lg"
+        >
+          Off Plan Properties
+        </button>
+      </div>
+    </section>
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="flex flex-col items-center text-center text-white">
+            <img src="images/icon-marker.svg" class="h-12" />
+            <div>
+              <h3 class="text-xl font-bold mb-2">Local market knowledge</h3>
+              <p class="text-gray-400 text-sm">
+                We know the Dubai real estate market inside-out, and partner
+                with top developers in the region to deliver the best available
+                properties to our clients.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center text-center text-white">
+            <img src="images/icon-globe.svg" class="h-12" />
+            <div>
+              <h3 class="text-xl font-bold mb-2">International community</h3>
+              <p class="text-gray-400 text-sm">
+                All Maas &amp; Weber clients become part of an international
+                network of homeowners, investors and business-minded
+                individuals. Our clients benefit from diverse opportunities and
+                create successful partnerships via these connections.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center text-center text-white">
+            <img src="images/icon-bulb.svg" class="h-12" />
+            <div>
+              <h3 class="text-xl font-bold mb-2">Expertise you can trust</h3>
+              <p class="text-gray-400 text-sm">
+                Over 17 years of experience in the real estate and banking
+                industry. Our founders ensure that we will hand-pick the best
+                investment opportunities for you in Dubai and beyond.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col items-center text-center text-white">
+            <img src="images/icon-3stars.svg" class="h-12" />
+            <div>
+              <h3 class="text-xl font-bold mb-2">Bespoke service</h3>
+              <p class="text-gray-400 text-sm">
+                &quot;Be the company your clients can't live without&quot; -
+                this is more than just a slogan; it's our commitment to you. We
+                assist with buying, selling, securing a mortgage, furnishing and
+                finding the right tenant.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-center mb-4 space-x-4">
+          <div class="flex-grow border-t border-white"></div>
+          <h2
+            class="font-bold text-3xl text-white text-center whitespace-nowrap"
+          >
+            New Projects
+          </h2>
+          <div class="flex-grow border-t border-white"></div>
+        </div>
+        <div class="flex justify-end mb-4">
+          <button
+            class="border border-white duration-300 hover:bg-mwblack-400 px-4 py-2 rounded-lg text-white transform"
+          >
+            More Projects
+          </button>
+        </div>
+        <div class="gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <img
+              src="images/sample-image-1.png"
+              alt="Project 1"
+              class="aspect-[4/3] object-cover rounded-lg w-full"
+            />
+            <div class="pt-5">
+              <p class="text-base text-white">
+                From AED 2,300,000 | EUR 575,000*
+              </p>
+              <p class="mb-2 text-white text-xs">
+                *Information variable according to the current exchange rate
+              </p>
+              <h3 class="font-bold mb-2 text-white text-xs">
+                Project Name, Community, City
+              </h3>
+              <p class="text-sm text-white">
+                Highlight 1 | Highlight 2 | Highlight 3
+              </p>
+              <div class="flex items-center mt-4">
+                <span class="text-sm text-white"
+                  >Expected rental yield: 8%-9%</span
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="images/sample-image-1.png"
+              alt="Project 1"
+              class="aspect-[4/3] object-cover rounded-lg w-full"
+            />
+            <div class="pt-5">
+              <p class="text-base text-white">
+                From AED 2,300,000 | EUR 575,000*
+              </p>
+              <p class="mb-2 text-white text-xs">
+                *Information variable according to the current exchange rate
+              </p>
+              <h3 class="font-bold mb-2 text-white text-xs">
+                Project Name, Community, City
+              </h3>
+              <p class="text-sm text-white">
+                Highlight 1 | Highlight 2 | Highlight 3
+              </p>
+              <div class="flex items-center mt-4">
+                <span class="text-sm text-white"
+                  >Expected rental yield: 8%-9%</span
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="images/sample-image-1.png"
+              alt="Project 1"
+              class="aspect-[4/3] object-cover rounded-lg w-full"
+            />
+            <div class="pt-5">
+              <p class="text-base text-white">
+                From AED 2,300,000 | EUR 575,000*
+              </p>
+              <p class="mb-2 text-white text-xs">
+                *Information variable according to the current exchange rate
+              </p>
+              <h3 class="font-bold mb-2 text-white text-xs">
+                Project Name, Community, City
+              </h3>
+              <p class="text-sm text-white">
+                Highlight 1 | Highlight 2 | Highlight 3
+              </p>
+              <div class="flex items-center mt-4">
+                <span class="text-sm text-white"
+                  >Expected rental yield: 8%-9%</span
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="images/sample-image-1.png"
+              alt="Project 1"
+              class="aspect-[4/3] object-cover rounded-lg w-full"
+            />
+            <div class="pt-5">
+              <p class="text-base text-white">
+                From AED 2,300,000 | EUR 575,000*
+              </p>
+              <p class="mb-2 text-white text-xs">
+                *Information variable according to the current exchange rate
+              </p>
+              <h3 class="font-bold mb-2 text-white text-xs">
+                Project Name, Community, City
+              </h3>
+              <p class="text-sm text-white">
+                Highlight 1 | Highlight 2 | Highlight 3
+              </p>
+              <div class="flex items-center mt-4">
+                <span class="text-sm text-white"
+                  >Expected rental yield: 8%-9%</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="font-semibold mb-8 text-2xl text-center text-white">
+          Considering investing in European properties? We offer properties in
+          the most idyllic areas in Germany, Austria and Switzerland
+        </h2>
+        <button
+          class="bg-gold-500 duration-300 font-semibold hover:bg-gold-400 px-6 py-4 rounded-lg text-lg text-white transform"
+        >
+          <p>See European Properties</p>
+        </button>
+      </div>
+    </section>
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-center mb-4 space-x-4">
+          <div class="flex-grow border-t border-white"></div>
+          <h2
+            class="font-bold text-3xl text-white text-center whitespace-nowrap"
+          >
+            Explore
+          </h2>
+          <div class="flex-grow border-t border-white"></div>
+        </div>
+        <div class="flex flex-col gap-8 items-start xl:flex-row">
+          <div style="grid-area: 1 / 1 / 2 / 2" class="w-full xl:w-4/12">
+            <div class="mb-4">
+              <span class="font-bold mb-4 text-gold-500 text-xl"
+                >DREAMING
+              </span>
+              <span class="text-white mb-4"
+                >of owning a property in the vibrant city of Dubai?</span
+              >
+            </div>
+            <p class="text-white mb-8">
+              Our comprehensive guides cover everything you need to know:
+              in-depth insights, detailed location guides and so much more.
+            </p>
+            <p class="text-white mb-8">
+              Whether you are a seasoned investor or a first-time buyer, our
+              guides will help you make a well-informed decision.
+            </p>
+            <p class="text-white mb-8">
+              Discover the unparalleled opportunities in Dubai, where innovation
+              meets luxury and let us be your trusted source for property
+              expertise.
+            </p>
+            <p class="text-white mb-8">
+              Explore the future, and unlock the potential of Dubai with our
+              expert guidance.
+            </p>
+            <img src="images/maas-weber-signature.svg" />
+          </div>
+          <div
+            class="gap-8 grid grid-cols-1 w-full md:grid-cols-3 xl:w-8/12"
+            style="grid-area: 1 / 2 / 2 / 4"
+          >
+            <div
+              class="aspect-[1/1] bg-white flex items-center justify-center relative shadow-md"
+            >
+              <h4
+                class="-translate-x-1/2 -translate-y-1/2 absolute font-bold leading-6 left-1/2 text-center text-xl top-1/2 transform"
+              >
+                DUBAI BUYERS GUIDE
+              </h4>
+              <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGR1YmFpfGVufDB8fHx8MTcxOTMxNjc0OXww&ixlib=rb-4.0.3&q=80&w=1080"
+                class="h-full object-cover w-full"
+              />
+            </div>
+            <div
+              class="aspect-[1/1] bg-white flex items-center justify-center relative shadow-md"
+            >
+              <h4
+                class="-translate-x-1/2 -translate-y-1/2 absolute font-bold leading-6 left-1/2 text-center text-xl top-1/2 transform"
+              >
+                DUBAI SELLERS GUIDE
+              </h4>
+              <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGR1YmFpfGVufDB8fHx8MTcxOTMxNjc0OXww&ixlib=rb-4.0.3&q=80&w=1080"
+                class="h-full object-cover w-full"
+              />
+            </div>
+            <div
+              class="aspect-[1/1] bg-white flex items-center justify-center relative shadow-md"
+            >
+              <h4
+                class="-translate-x-1/2 -translate-y-1/2 absolute font-bold leading-6 left-1/2 text-center text-xl top-1/2 transform"
+              >
+                DUBAI LANDLORD GUIDE
+              </h4>
+              <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGR1YmFpfGVufDB8fHx8MTcxOTMxNjc0OXww&ixlib=rb-4.0.3&q=80&w=1080"
+                class="h-full object-cover w-full"
+              />
+            </div>
+            <div
+              class="aspect-[1/1] bg-white flex items-center justify-center relative shadow-md"
+            >
+              <h4
+                class="-translate-x-1/2 -translate-y-1/2 absolute font-bold leading-6 left-1/2 text-center text-xl top-1/2 transform"
+              >
+                DUBAI MORTGAGE GUIDE
+              </h4>
+              <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGR1YmFpfGVufDB8fHx8MTcxOTMxNjc0OXww&ixlib=rb-4.0.3&q=80&w=1080"
+                class="h-full object-cover w-full"
+              />
+            </div>
+            <div
+              class="aspect-[1/1] bg-white flex items-center justify-center relative shadow-md"
+            >
+              <h4
+                class="-translate-x-1/2 -translate-y-1/2 absolute font-bold leading-6 left-1/2 text-center text-xl top-1/2 transform"
+              >
+                DUBAI COMMUNITIES GUIDE
+              </h4>
+              <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGR1YmFpfGVufDB8fHx8MTcxOTMxNjc0OXww&ixlib=rb-4.0.3&q=80&w=1080"
+                class="h-full object-cover w-full"
+              />
+            </div>
+            <div
+              class="aspect-[1/1] bg-white flex items-center justify-center relative shadow-md"
+            >
+              <h4
+                class="-translate-x-1/2 -translate-y-1/2 absolute font-bold leading-6 left-1/2 text-center text-xl top-1/2 transform"
+              >
+                DUBAI DEVELOPER GUIDE
+              </h4>
+              <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGR1YmFpfGVufDB8fHx8MTcxOTMxNjc0OXww&ixlib=rb-4.0.3&q=80&w=1080"
+                class="h-full object-cover w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="py-12">
+      <div class="bg-gold-500 p-5">
+        <div
+          class="gap-8 grid grid-cols-1 max-w-6xl mx-auto px-4 text-sm md:grid-cols-3"
+        >
+          <div>
+            <h3 class="text-xl font-bold">BUY</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/off-plan-properties">READY PROPERTIES</a>
+              </li>
+              <li>
+                <a href="/secondary-market-properties">OFF PLAN PROPERTIES</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">SELL</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/dubai-buyers-guide">LIST YOUR PROPERTY</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">GUIDES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">COMMUNITIES IN DUBAI</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">BUYERS GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">SELLERS GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">LANDLORD GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">MORTGAGE GUIDE</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">SERVICES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">RENTAL SERVICE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">MORTGAGE SERVICE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">LEGAL SERVICE</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">EUROPEAN PROPERTIES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">PROPERTIES TO SELL</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">ABOUT</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">ABOUT US</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">CAREER</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-extralight max-w-6xl mt-8 mx-auto px-4 text-center text-gold-500 text-sm w-full md:mt-12"
+      >
+        <p class="mb-2">
+          <a href="/terms-and-conditions">Terms and Conditions</a> |
+          <a href="/privacy-policy">Privacy Policy</a> |
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/contact">Contact</a>
+        </p>
+        <p class="mb-2">
+          © 2024 Maas & Weber International Real Estate Broker LLC, All rights
+          reserved.
+        </p>
+        <p>
+          A limited liability company with a registered office in Dubai UAE.
+          Registration number: 1123095
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

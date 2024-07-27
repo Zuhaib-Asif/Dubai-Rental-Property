@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-mwblack-500 {
+    background-color: #1f1e1e;
+  }
+  .bg-mwblack-400 {
+    background-color: rgb(64, 63, 63);
+  }
+  .text-gold-600 {
+    background-color: rgb(159, 133, 60);
+  }
+  .text-gold-500 {
+    color: rgb(185, 154, 69);
+  }
+
+  .text-gold-400 {
+    color: rgb(199, 170, 101);
+  }
+  .bg-gold-500 {
+    background-color: rgb(185, 154, 69);
+  }
+  .bg-gold-400 {
+    background-color: rgb(199, 170, 101);
+  }
+  .bg-gold-600 {
+    background-color: rgb(159, 133, 60);
+  }
+  .divide-gold-500 {
+    border-color: rgb(185, 154, 69);
+  }
+}
