@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Maas & Weber International Real Estate Broker</title>
+    <link href="./output.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="bg-mwblack-500 font-sans text-gray-900">
+    <header
+      class="flex items-center justify-between px-5 py-3 shadow-md text-gold-500 lg:py-7"
+    >
+      <a
+        href="index.html"
+        class="divide-x divide-gold-500 flex w-64 xl:w-full"
+        id="left"
+      >
+        <img src="images/maas-weber-logo.svg" class="h-11 mr-2 text-gold-500" />
+        <div
+          class="flex flex-col divide-gold-500 font-semibold justify-center px-2 text-[10px]"
+        >
+          <p>DUBAI</p>
+          <p>DÜSSELDORF</p>
+          <p>MÜNCHEN</p>
+        </div>
+      </a>
+      <div id="right">
+        <div class="flex justify-end lg:mb-4" id="language">
+          <div class="inline-block relative text-left z-50">
+            <button
+              id="languageButton"
+              class="focus:outline-none font-medium hover:bg-mwblack-500 inline-flex items-center justify-center py-2 rounded-md shadow-sm text-sm w-full"
+            >
+              <img
+                id="selectedFlag"
+                src="images/flag-uk.svg"
+                alt="UK flag"
+                class="mr-2 w-5 h-5"
+              /><span id="selectedLanguage">English</span>
+              <svg
+                class="-mr-1 h-5 ml-2 text-gold-500 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div
+              id="languageDropdown"
+              class="absolute bg-mwblack-500 focus:outline-none hidden right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg w-56"
+            >
+              <div class="py-1" role="menu" aria-orientation="vertical">
+                <button
+                  class="block hover:bg-mwblack-500 px-4 py-2 text-left text-sm w-full"
+                  role="menuitem"
+                  data-lang="English"
+                  data-flag="images/flag-uk.svg"
+                >
+                  <img
+                    src="images/flag-uk.svg"
+                    alt="UK flag"
+                    class="mr-2 inline-block w-5 h-5"
+                  />
+                  English
+                </button>
+                <button
+                  class="block hover:bg-mwblack-500 px-4 py-2 text-left text-sm w-full"
+                  role="menuitem"
+                  data-lang="Deutsch"
+                  data-flag="images/flag-de.svg"
+                >
+                  <img
+                    src="images/flag-de.svg"
+                    alt="German flag"
+                    class="mr-2 inline-block w-5 h-5"
+                  />
+                  Deutsch
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="bg-mwblack-500 relative">
+          <div class="flex justify-end">
+            <!-- Burger menu button (visible on mobile, hidden on lg and above) -->
+            <button
+              id="burger-menu"
+              class="focus:outline-none hover:text-gray-300 lg:hidden text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                class="h-7 w-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                  class="burger-icon"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                  class="close-icon hidden"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Desktop menu (hidden on mobile, visible on lg and above) -->
+          <ul
+            class="hidden items-center justify-end space-x-4 text-sm uppercase lg:flex"
+          >
+            <li>
+              <a
+                href="#buy"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Buy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sell"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Sell</a
+              >
+            </li>
+            <li>
+              <a
+                href="#guides"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Guides</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#european-properties"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >European Properties</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="bg-gold-500 duration-300 hover:bg-gold-400 p-2 rounded-md text-white transform truncate"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div
+          id="mobile-menu"
+          class="bg-mwblack-500 bg-opacity-90 bottom-0 fixed hidden pt-4 right-0 top-20 w-96 z-30"
+        >
+          <ul class="text-center text-sm uppercase">
+            <li>
+              <a
+                href="#buy"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Buy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sell"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Sell</a
+              >
+            </li>
+            <li>
+              <a
+                href="#guides"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Guides</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#european-properties"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >European Properties</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section id="hero" class="relative">
+      <img
+        src="./images/dubai-downtown-small.jpg"
+        class="w-full h-96 object-cover"
+      />
+
+      <div
+        class="-translate-x-1/2 -translate-y-1/2 absolute font-bold left-1/2 text-center text-white top-1/2 transform w-full flex items-center justify-center mb-4 space-x-4"
+      >
+        <div class="flex-grow border-t border-white"></div>
+        <h2 class="font-bold text-3xl text-white text-center whitespace-nowrap">
+          Dubai Downtown
+        </h2>
+        <div class="flex-grow border-t border-white"></div>
+      </div>
+    </section>
+
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="w-full">
+          <div class="mb-4">
+            <span class="font-bold mb-4 text-gold-500 text-xl"
+              >DUBAI DOWNTOWN - THE BEATING HEART OF DUBAI</span
+            >
+            <br /><br />
+            <span class="text-white mb-4"
+              >Downtown Dubai is a vibrant, mixed-use community that has become
+              the crown jewel of Dubai’s urban landscape. Developed in the early
+              21st century, this meticulously planned area was designed to
+              redefine urban living by combining premium residential spaces with
+              world-class entertainment and cultural attractions. <br /><br />
+              The community spans approximately 2 square kilometers and is
+              characterized by its modern skyscrapers, luxurious residences, and
+              iconic landmarks. It seamlessly blends residential, commercial,
+              and hospitality elements to create a dynamic urban center that
+              never sleeps.
+              <br /><br />
+              Despite its bustling nature, Downtown Dubai incorporates
+              well-maintained green spaces, providing residents with areas of
+              relaxation and recreation amidst the urban hustle. This balance of
+              excitement and tranquility makes it an attractive destination for
+              both residents and visitors.
+            </span>
+          </div>
+          <div
+            class="flex flex-col lg:flex-row items-center lg:gap-16 xl:gap-28"
+          >
+            <div>
+              <p class="font-bold mb-4 text-gold-500 text-xl">
+                LOCATION AND LANDMARKS
+              </p>
+              <p class="text-white mb-4">
+                Located in the heart of Dubai, Downtown Dubai is strategically
+                positioned to offer easy access to key areas of the city. It’s
+                bordered by Financial Centre Road to the northeast, Sheikh Zayed
+                Road to the northwest, and Al Khail Road to the southeast.
+              </p>
+              <ul>
+                <li class="list-none text-white mb-4 list-inside">
+                  Key landmarks include:
+                  <ul>
+                    <li class="list-disc ml-5">
+                      Burj Khalifa: The world’s tallest building at 828 meters,
+                      completed in 2010. It’s not just a residential and
+                      commercial space but also a global icon symbolizing
+                      Dubai’s ambition and progress.
+                    </li>
+                    <li class="list-disc ml-5">
+                      The Dubai Mall: One of the largest shopping centers
+                      globally, offering a mix of retail, dining, and
+                      entertainment options.
+                    </li>
+                    <li class="list-disc ml-5">
+                      The Dubai Fountain: a spectacular choreographed fountain
+                      system set on the Burj Khalifa Lake.
+                    </li>
+                    <li class="list-disc ml-5">
+                      Dubai Opera: A multi-format performing arts center, adding
+                      a cultural dimension to the area.
+                    </li>
+                    <li class="list-disc ml-5">
+                      Souk Al Bahar: An arabesque shopping mall and dining
+                      destination located on the Old Town Island.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="w-full mt-10 lg:mt-0">
+              <iframe
+                class="w-full lg:w-[400px] h-[300px] xl:w-[500px] xl:h-[350px]"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14441.078441604033!2d55.27802644999999!3d25.19412875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f682f700cf983%3A0xb5cc58b076c0b904!2sDowntown%20Dubai%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1722105051611!5m2!1sen!2s"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+          <div>
+            <p class="font-bold mt-8 mb-4 lg:mt-4 text-gold-500 text-xl">
+              PROPERTY INSIGHTS
+            </p>
+            <p class="text-white mb-4">
+              Downtown Dubai offers a diverse range of property types from
+              high-rise luxury apartments to premium office spaces in iconic
+              towers. Most notable projects are the Address Residences, Burj
+              Vista, South Ridge, Burj Royale, The Lofts, Old Town, Burj Views,
+              Emaar Square and Boulevard Plaza.
+            </p>
+          </div>
+          <div class="border-[1px] border-solid divide-gold-500 p-5 lg:p-11">
+            <div
+              class="text-white flex-col gap-10 text-center flex lg:flex-row justify-between"
+            >
+              <p class="flex flex-col items-center font-bold">
+                Average price / Sqm <br />
+                <span class="text-3xl">EUR 7,110 </span>
+              </p>
+              <p class="flex flex-col items-center font-bold">
+                Expected rental yield<br />
+                <span class="text-3xl">6% </span>
+              </p>
+              <p class="flex flex-col items-center font-bold">
+                <span>
+                  Average annual capital appreciation
+                  <span class="text-xs">(last 3 years)</span>
+                </span>
+                <br />
+                <span class="text-3xl">13.0% </span>
+              </p>
+            </div>
+            <div class="flex-col flex lg:flex-row justify-between mt-5 gap-10">
+              <img
+                class="w-full lg:w-1/2"
+                src="./images/dubai-downtow-average-one.jpg"
+                alt=""
+              />
+              <img
+                class="w-full lg:w-1/2"
+                src="./images/dubai-downtow-average-two.jpg"
+                alt=""
+              />
+            </div>
+            <div class="text-white italic text-[9px] mt-10">
+              <p>
+                Source: Data obtained from https://dxbinteract.com. Updated
+                22.07.224
+              </p>
+              <p>
+                Euro values converted from United Arab mirates Dirhams (AED)
+                using a fixed exchange rate of 4:1. Values are not adjusted for
+                daily currency fluctuations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-12">
+      <div class="bg-gold-500 p-5">
+        <div
+          class="gap-8 grid grid-cols-1 max-w-6xl mx-auto px-4 text-sm md:grid-cols-3"
+        >
+          <div>
+            <h3 class="text-xl font-bold">BUY</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/off-plan-properties">READY PROPERTIES</a>
+              </li>
+              <li>
+                <a href="/secondary-market-properties">OFF PLAN PROPERTIES</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">SELL</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/dubai-buyers-guide">LIST YOUR PROPERTY</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">GUIDES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">COMMUNITIES IN DUBAI</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">BUYERS GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">SELLERS GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">LANDLORD GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">MORTGAGE GUIDE</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">SERVICES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">RENTAL SERVICE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">MORTGAGE SERVICE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">LEGAL SERVICE</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">EUROPEAN PROPERTIES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">PROPERTIES TO SELL</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">ABOUT</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">ABOUT US</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">CAREER</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-extralight max-w-6xl mt-8 mx-auto px-4 text-center text-gold-500 text-sm w-full md:mt-12"
+      >
+        <p class="mb-2">
+          <a href="/terms-and-conditions">Terms and Conditions</a> |
+          <a href="/privacy-policy">Privacy Policy</a> |
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/contact">Contact</a>
+        </p>
+        <p class="mb-2">
+          © 2024 Maas & Weber International Real Estate Broker LLC, All rights
+          reserved.
+        </p>
+        <p>
+          A limited liability company with a registered office in Dubai UAE.
+          Registration number: 1123095
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
