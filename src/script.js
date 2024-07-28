@@ -71,3 +71,48 @@ document.addEventListener("DOMContentLoaded", function () {
     event.stopPropagation();
   });
 });
+
+// custom select
+document.addEventListener("DOMContentLoaded", function () {
+  const customSelects = document.querySelectorAll(".custom-select");
+
+  customSelects.forEach((selectContainer) => {
+    const select = selectContainer.querySelector("select");
+    const selected = selectContainer.querySelector(".select-selected");
+    const items = selectContainer.querySelector(".select-items");
+    const options = items.querySelectorAll("div");
+
+    selected.addEventListener("click", function () {
+      items.classList.toggle("hidden");
+      selected.classList.toggle("select-arrow-active");
+      closeAllSelect(selected);
+    });
+
+    options.forEach((option, index) => {
+      option.addEventListener("click", function () {
+        select.selectedIndex = index + 1;
+        selected.innerHTML = option.innerHTML;
+        options.forEach((opt) => opt.classList.remove("same-as-selected"));
+        option.classList.add("same-as-selected");
+        items.classList.add("hidden");
+      });
+    });
+  });
+
+  function closeAllSelect(current) {
+    customSelects.forEach((selectContainer) => {
+      const selected = selectContainer.querySelector(".select-selected");
+      const items = selectContainer.querySelector(".select-items");
+      if (selected !== current) {
+        items.classList.add("hidden");
+        selected.classList.remove("select-arrow-active");
+      }
+    });
+  }
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.classList.contains("select-selected")) {
+      closeAllSelect(null);
+    }
+  });
+});

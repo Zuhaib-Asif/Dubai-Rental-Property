@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Maas & Weber International Real Estate Broker</title>
+    <link href="./output.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="bg-mwblack-500 font-sans text-gray-900">
+    <header
+      class="flex items-center justify-between px-5 py-3 shadow-md text-gold-500 lg:py-7"
+    >
+      <a
+        href="index.html"
+        class="divide-x divide-gold-500 flex w-64 xl:w-full"
+        id="left"
+      >
+        <img src="images/maas-weber-logo.svg" class="h-11 mr-2 text-gold-500" />
+        <div
+          class="flex flex-col divide-gold-500 font-semibold justify-center px-2 text-[10px]"
+        >
+          <p>DUBAI</p>
+          <p>DÜSSELDORF</p>
+          <p>MÜNCHEN</p>
+        </div>
+      </a>
+      <div id="right">
+        <div class="flex justify-end lg:mb-4" id="language">
+          <div class="inline-block relative text-left z-50">
+            <button
+              id="languageButton"
+              class="focus:outline-none font-medium hover:bg-mwblack-500 inline-flex items-center justify-center py-2 rounded-md shadow-sm text-sm w-full"
+            >
+              <img
+                id="selectedFlag"
+                src="images/flag-uk.svg"
+                alt="UK flag"
+                class="mr-2 w-5 h-5"
+              /><span id="selectedLanguage">English</span>
+              <svg
+                class="-mr-1 h-5 ml-2 text-gold-500 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div
+              id="languageDropdown"
+              class="absolute bg-mwblack-500 focus:outline-none hidden right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg w-56"
+            >
+              <div class="py-1" role="menu" aria-orientation="vertical">
+                <button
+                  class="block hover:bg-mwblack-500 px-4 py-2 text-left text-sm w-full"
+                  role="menuitem"
+                  data-lang="English"
+                  data-flag="images/flag-uk.svg"
+                >
+                  <img
+                    src="images/flag-uk.svg"
+                    alt="UK flag"
+                    class="mr-2 inline-block w-5 h-5"
+                  />
+                  English
+                </button>
+                <button
+                  class="block hover:bg-mwblack-500 px-4 py-2 text-left text-sm w-full"
+                  role="menuitem"
+                  data-lang="Deutsch"
+                  data-flag="images/flag-de.svg"
+                >
+                  <img
+                    src="images/flag-de.svg"
+                    alt="German flag"
+                    class="mr-2 inline-block w-5 h-5"
+                  />
+                  Deutsch
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="bg-mwblack-500 relative">
+          <div class="flex justify-end">
+            <!-- Burger menu button (visible on mobile, hidden on lg and above) -->
+            <button
+              id="burger-menu"
+              class="focus:outline-none hover:text-gray-300 lg:hidden text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                class="h-7 w-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                  class="burger-icon"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                  class="close-icon hidden"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Desktop menu (hidden on mobile, visible on lg and above) -->
+          <ul
+            class="hidden items-center justify-end space-x-4 text-sm uppercase lg:flex"
+          >
+            <li>
+              <a
+                href="#buy"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Buy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sell"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Sell</a
+              >
+            </li>
+            <li>
+              <a
+                href="#guides"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Guides</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#european-properties"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >European Properties</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="bg-gold-500 duration-300 hover:bg-gold-400 p-2 rounded-md text-white transform truncate"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div
+          id="mobile-menu"
+          class="bg-mwblack-500 bg-opacity-90 bottom-0 fixed hidden pt-4 right-0 top-20 w-96 z-30"
+        >
+          <ul class="text-center text-sm uppercase">
+            <li>
+              <a
+                href="#buy"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Buy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sell"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Sell</a
+              >
+            </li>
+            <li>
+              <a
+                href="#guides"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Guides</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#european-properties"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >European Properties</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section id="hero" class="relative">
+      <img src="./images/dubai-view.jpg" class="w-full h-96 object-cover" />
+
+      <div
+        class="-translate-x-1/2 -translate-y-1/2 absolute font-bold left-1/2 text-center text-white top-1/2 transform w-full flex items-center justify-center mb-4 space-x-4"
+      >
+        <div class="flex-grow border-t border-white"></div>
+        <h2 class="font-bold text-3xl text-white text-center whitespace-nowrap">
+          CONTACT
+        </h2>
+        <div class="flex-grow border-t border-white"></div>
+      </div>
+    </section>
+
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row justify-between gap-12">
+          <div class="w-full lg:w-[55%]">
+            <div class="mb-4">
+              <span class="font-bold mb-4 text-gold-500 text-xl"
+                >CONSIDERING
+              </span>
+              <span class="text-white mb-4"
+                >elling or renting your property? We understand that listung
+                your property is a significant decision that can seem daunting.
+                That’s why we offer comprehensive support thoughout the entire
+                process, from initial valuation to final completion or move-in.
+              </span>
+            </div>
+            <p class="text-white mb-8">
+              Our approach is both thorough and selective. We beginn with a
+              viewing to ensure optimal pricing. Then, we create a stunning
+              360-degree virtual tour, showcasing your property’s best features
+              to potential buyers or tenants worlwide.
+            </p>
+            <p class="text-white mb-8">
+              What sets us apart is our vast network of international buyers and
+              renters. This global reach, combined with our selective process,
+              ensures that your property is presented to serious, qualified
+              prospects across the globe.
+            </p>
+            <p class="text-white mb-8">
+              With Maas & Weber International, you’re not just listing a
+              property - you’re tapping into a world of opportunities. Let our
+              expertise and global connections work for you, simplifying your
+              journey and maximizing your property’s potential.
+            </p>
+            <div class="flex justify-end">
+              <img src="./images/maas-weber-signature.svg" alt="" />
+            </div>
+          </div>
+          <form class="w-full lg:w-5/6 xl:w-5/12 space-y-4">
+            <div class="gap-5 sm:flex">
+              <div class="text-base text-left font-normal w-full">
+                <label class="text-white" for="">Name</label>
+                <br />
+                <input
+                  class="text-black mt-2 py-3 px-4 rounded-lg w-full"
+                  type="text"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div class="text-base text-left font-normal w-full">
+                <label class="text-white" for="">Email</label>
+                <br />
+                <input
+                  class="text-black mt-2 py-3 px-4 rounded-lg w-full"
+                  type="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+            </div>
+            <div class="gap-5 sm:flex">
+              <div class="text-base text-left font-normal w-full">
+                <label class="text-white" for="">Phone Number</label>
+                <br />
+                <input
+                  class="text-black mt-2 py-3 px-4 rounded-lg w-full"
+                  type="tel"
+                  placeholder="+971"
+                  required
+                />
+              </div>
+              <div class="text-base text-left font-normal w-full">
+                <label class="text-white" for="">Preferred language</label>
+                <br />
+                <select
+                  name=""
+                  id=""
+                  class="text-black mt-2 py-3 px-4 rounded-lg w-full"
+                >
+                  <option value="English">English</option>
+                  <option value="German">German</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex gap-5">
+              <div class="text-base text-left font-normal w-full">
+                <label class="text-white" for="">Property Address</label>
+                <br />
+                <input
+                  class="text-black mt-2 py-3 px-4 rounded-lg w-full"
+                  type="text"
+                  placeholder="Property Address"
+                />
+              </div>
+            </div>
+            <div class="gap-5 sm:flex">
+              <div class="text-base text-left font-normal w-full">
+                <label class="text-white" for="">Property Type</label>
+                <br />
+                <div class="custom-select relative inline-block w-full mt-2">
+                  <select class="hidden">
+                    <option value="0">Select</option>
+                    <option value="1">Apartment</option>
+                    <option value="2">Penthouse</option>
+                    <option value="3">Townhouse</option>
+                    <option value="4">Villa</option>
+                    <option value="5">Others</option>
+                  </select>
+                  <div
+                    class="select-selected bg-white text-black py-[10px] px-4 rounded cursor-pointer"
+                  >
+                    Select
+                  </div>
+                  <div
+                    class="select-items z-10 absolute left-0 right-0 bg-white text-black shadow-md hidden"
+                  >
+                    <div class="py-2 px-4 cursor-pointer">Apartment</div>
+                    <div class="py-2 px-4 cursor-pointer">Penthouse</div>
+                    <div class="py-2 px-4 cursor-pointer">Townhouse</div>
+                    <div class="py-2 px-4 cursor-pointer">Villa</div>
+                    <div class="py-2 px-4 cursor-pointer">Others</div>
+                  </div>
+                  <svg
+                    class="absolute right-3 top-0 select-none pointer-events-none"
+                    width="20"
+                    height="43"
+                    viewBox="0 0 20 43"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect width="20" height="43" fill="url(#pattern0_215_18)" />
+                    <defs>
+                      <pattern
+                        id="pattern0_215_18"
+                        patternContentUnits="objectBoundingBox"
+                        width="1"
+                        height="1"
+                      >
+                        <use
+                          xlink:href="#image0_215_18"
+                          transform="matrix(0.0111111 0 0 0.00516796 0 0.267442)"
+                        />
+                      </pattern>
+                      <image
+                        id="image0_215_18"
+                        width="90"
+                        height="90"
+                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACP0lEQVR4nO3au24TQRTG8T9yuJgiEm1A6dyQFzANtTtq3HB5gbwCRQoEIqnTgRQkaqj8CIgiHRR0FEGESySKKAUwaKWpIhL2cnZ8Zvb7Sae095zRrmc+2yAiIiIiIiIiIiIiIiIiIiIiIiIDcwnYBo5i7QBjhmccZ/8R12E7ro2Z6g3DqXoH3GA4rseZT6/DM8uLfPvHBar6DNyifFPg4Iw1+Gp5oXBOnQAPKddd4Pg/a2Am1Khd4CLlGAGPa85uJtSsBXCN/K0CrxvMbSY0qI/ABvmaAO8bzmwmNKyfwB3yM4vHtqbzmgkt6g/wCLhAHjaBXy1nNfOpZQNVvXQebsaxx7bzfbdsZqtDI8FxuDkrhDSpam3MrAB7HRs6cBZuzgshdWsvro2rz7HgKNzMa4SQpe8/bXfm4CDcNAkhLk5U1VnzQ8eGF4nDTRVC3nTsucoINxP2bNr4htMQsuwbI7tHcWb0UdfLplfK5rJpsHk/wBmL49Ir4KpBL5eB5x17OQRu49Qa8LbjgPvAeuY9JHEFeLGku2nq6KlKJnW4mTvdJ5JIEW5GGZx8sg83q7mGkJzCzSTDdJrEyPARLyqE9OV+3OjaLtDvWG1fX137HgMxNTiGFRdC+rJmECyKCyGew00oMYR4DTehxBDSl5nBSaK4ENKXicHZuLgQ4jXcLEoMId7CzW7pIaQv85rfyLn8JaS0cHM4xBCSOtzsDzmE9PlnxKfxDv4CPHH+50kRERERERERERERERERERERwb+/YGrGcWd8VcYAAAAASUVORK5CYII="
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="text-base text-left font-normal w-full">
+                <label class="text-white" for="">Property Purpose</label>
+                <br />
+                <div
+                  class="custom-select z-10 relative inline-block w-full mt-2"
+                >
+                  <select class="hidden">
+                    <option value="0">Select</option>
+                    <option value="1">For Sale</option>
+                    <option value="2">For Rent</option>
+                  </select>
+                  <div
+                    class="select-selected bg-white text-black py-[10px] px-4 rounded cursor-pointer"
+                  >
+                    Select
+                  </div>
+                  <div
+                    class="select-items absolute left-0 right-0 bg-white text-black shadow-md hidden"
+                  >
+                    <div class="py-2 px-4 cursor-pointer">For Sale</div>
+                    <div class="py-2 px-4 cursor-pointer">For Rent</div>
+                  </div>
+                  <svg
+                    class="absolute right-3 top-0 select-none pointer-events-none"
+                    width="20"
+                    height="43"
+                    viewBox="0 0 20 43"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect width="20" height="43" fill="url(#pattern0_215_18)" />
+                    <defs>
+                      <pattern
+                        id="pattern0_215_18"
+                        patternContentUnits="objectBoundingBox"
+                        width="1"
+                        height="1"
+                      >
+                        <use
+                          xlink:href="#image0_215_18"
+                          transform="matrix(0.0111111 0 0 0.00516796 0 0.267442)"
+                        />
+                      </pattern>
+                      <image
+                        id="image0_215_18"
+                        width="90"
+                        height="90"
+                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACP0lEQVR4nO3au24TQRTG8T9yuJgiEm1A6dyQFzANtTtq3HB5gbwCRQoEIqnTgRQkaqj8CIgiHRR0FEGESySKKAUwaKWpIhL2cnZ8Zvb7Sae095zRrmc+2yAiIiIiIiIiIiIiIiIiIiIiIiIDcwnYBo5i7QBjhmccZ/8R12E7ro2Z6g3DqXoH3GA4rseZT6/DM8uLfPvHBar6DNyifFPg4Iw1+Gp5oXBOnQAPKddd4Pg/a2Am1Khd4CLlGAGPa85uJtSsBXCN/K0CrxvMbSY0qI/ABvmaAO8bzmwmNKyfwB3yM4vHtqbzmgkt6g/wCLhAHjaBXy1nNfOpZQNVvXQebsaxx7bzfbdsZqtDI8FxuDkrhDSpam3MrAB7HRs6cBZuzgshdWsvro2rz7HgKNzMa4SQpe8/bXfm4CDcNAkhLk5U1VnzQ8eGF4nDTRVC3nTsucoINxP2bNr4htMQsuwbI7tHcWb0UdfLplfK5rJpsHk/wBmL49Ir4KpBL5eB5x17OQRu49Qa8LbjgPvAeuY9JHEFeLGku2nq6KlKJnW4mTvdJ5JIEW5GGZx8sg83q7mGkJzCzSTDdJrEyPARLyqE9OV+3OjaLtDvWG1fX137HgMxNTiGFRdC+rJmECyKCyGew00oMYR4DTehxBDSl5nBSaK4ENKXicHZuLgQ4jXcLEoMId7CzW7pIaQv85rfyLn8JaS0cHM4xBCSOtzsDzmE9PlnxKfxDv4CPHH+50kRERERERERERERERERERERwb+/YGrGcWd8VcYAAAAASUVORK5CYII="
+                      />
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="gap-5 sm:flex">
+              <div class="text-base text-left font-normal w-full">
+                <label class="text-white" for=""
+                  >Preferred Call-Back Date</label
+                >
+                <br />
+                <input
+                  class="text-black mt-2 py-3 px-4 rounded-lg w-full"
+                  type="date"
+                />
+              </div>
+              <div class="text-base text-left font-normal w-full">
+                <label class="text-white" for=""
+                  >Preferred Call-Back Time (GST)</label
+                >
+                <br />
+                <input
+                  class="text-black mt-2 py-3 px-4 rounded-lg w-full"
+                  type="time"
+                />
+              </div>
+            </div>
+            <div class="flex gap-5">
+              <button
+                class="bg-gold-500 duration-300 font-semibold hover:bg-gold-400 px-6 py-4 rounded-lg text-lg text-white transform w-full"
+              >
+                <p>SUBMIT YOUR ENQUIRY</p>
+              </button>
+            </div>
+            <p class="text-white font-normal text-sm leading-4 text-left">
+              By submitting the form, you agree to our
+              <a class="underline font-bold" href="#">Terms & Conditions</a> and
+              <a class="underline font-bold" href="#">Privacy Policy.</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-12">
+      <div class="bg-gold-500 p-5">
+        <div
+          class="gap-8 grid grid-cols-1 max-w-6xl mx-auto px-4 text-sm md:grid-cols-3"
+        >
+          <div>
+            <h3 class="text-xl font-bold">BUY</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/off-plan-properties">READY PROPERTIES</a>
+              </li>
+              <li>
+                <a href="/secondary-market-properties">OFF PLAN PROPERTIES</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">SELL</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/dubai-buyers-guide">LIST YOUR PROPERTY</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">GUIDES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">COMMUNITIES IN DUBAI</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">BUYERS GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">SELLERS GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">LANDLORD GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">MORTGAGE GUIDE</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">SERVICES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">RENTAL SERVICE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">MORTGAGE SERVICE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">LEGAL SERVICE</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">EUROPEAN PROPERTIES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">PROPERTIES TO SELL</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">ABOUT</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">ABOUT US</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">CAREER</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-extralight max-w-6xl mt-8 mx-auto px-4 text-center text-gold-500 text-sm w-full md:mt-12"
+      >
+        <p class="mb-2">
+          <a href="/terms-and-conditions">Terms and Conditions</a> |
+          <a href="/privacy-policy">Privacy Policy</a> |
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/contact">Contact</a>
+        </p>
+        <p class="mb-2">
+          © 2024 Maas & Weber International Real Estate Broker LLC, All rights
+          reserved.
+        </p>
+        <p>
+          A limited liability company with a registered office in Dubai UAE.
+          Registration number: 1123095
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

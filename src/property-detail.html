@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Maas & Weber International Real Estate Broker</title>
+    <link href="./output.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="bg-mwblack-500 font-sans text-gray-900">
+    <header
+      class="flex items-center justify-between px-5 py-3 shadow-md text-gold-500 lg:py-7"
+    >
+      <div class="divide-gold-500 divide-x flex w-64 xl:w-full" id="left">
+        <img src="images/maas-weber-logo.svg" class="h-11 mr-2 text-gold-500" />
+        <div
+          class="flex flex-col font-semibold justify-center px-2 text-[10px]"
+        >
+          <p>DUBAI</p>
+          <p>DÜSSELDORF</p>
+          <p>MÜNCHEN</p>
+        </div>
+      </div>
+      <div id="right">
+        <div class="flex justify-end lg:mb-4" id="language">
+          <div class="inline-block relative text-left z-50">
+            <button
+              id="languageButton"
+              class="focus:outline-none font-medium hover:bg-mwblack-500 inline-flex items-center justify-center py-2 rounded-md shadow-sm text-sm w-full"
+            >
+              <img
+                id="selectedFlag"
+                src="images/flag-uk.svg"
+                alt="UK flag"
+                class="mr-2 w-5 h-5"
+              />
+              <span id="selectedLanguage">English</span>
+              <svg
+                class="-mr-1 h-5 ml-2 text-gold-500 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div
+              id="languageDropdown"
+              class="absolute bg-mwblack-500 focus:outline-none hidden right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg w-56"
+            >
+              <div class="py-1" role="menu" aria-orientation="vertical">
+                <button
+                  class="block hover:bg-mwblack-500 px-4 py-2 text-left text-sm w-full"
+                  role="menuitem"
+                  data-lang="English"
+                  data-flag="images/flag-uk.svg"
+                >
+                  <img
+                    src="images/flag-uk.svg"
+                    alt="UK flag"
+                    class="mr-2 inline-block w-5 h-5"
+                  />
+                  English
+                </button>
+                <button
+                  class="block hover:bg-mwblack-500 px-4 py-2 text-left text-sm w-full"
+                  role="menuitem"
+                  data-lang="Deutsch"
+                  data-flag="images/flag-de.svg"
+                >
+                  <img
+                    src="images/flag-de.svg"
+                    alt="German flag"
+                    class="mr-2 inline-block w-5 h-5"
+                  />
+                  Deutsch
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="bg-mwblack-500 relative">
+          <div class="flex justify-end">
+            <!-- Burger menu button (visible on mobile, hidden on lg and above) -->
+            <button
+              id="burger-menu"
+              class="focus:outline-none hover:text-gray-300 lg:hidden text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                class="h-7 w-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                  class="burger-icon"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                  class="close-icon hidden"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Desktop menu (hidden on mobile, visible on lg and above) -->
+          <ul
+            class="hidden items-center justify-end space-x-4 text-sm uppercase lg:flex"
+          >
+            <li>
+              <a
+                href="#buy"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Buy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sell"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Sell</a
+              >
+            </li>
+            <li>
+              <a
+                href="#guides"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Guides</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#european-properties"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >European Properties</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="bg-gold-500 duration-300 hover:bg-gold-400 p-2 rounded-md text-white transform truncate"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div
+          id="mobile-menu"
+          class="bg-mwblack-500 bg-opacity-90 bottom-0 fixed hidden pt-4 right-0 top-20 w-96 z-30"
+        >
+          <ul class="text-center text-sm uppercase">
+            <li>
+              <a
+                href="#buy"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Buy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sell"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Sell</a
+              >
+            </li>
+            <li>
+              <a
+                href="#guides"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Guides</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#european-properties"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >European Properties</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <div class="gap-8 space-y-11">
+          <!-- Property Card -->
+          <div class="flex flex-col rounded-lg shadow-lg">
+            <div class="flex flex-col lg:flex-row gap-[10px] lg:h-[600px]">
+              <div class="lg:w-3/4 relative">
+                <img
+                  class="rounded-lg h-[350px] lg:h-full w-full"
+                  src="./images/prop-detail-big.jpg"
+                  alt="Property"
+                />
+                <div
+                  class="flex gap-5 lg:gap-10 items-center absolute bottom-3 left-6"
+                >
+                  <p
+                    class="px-3 py-2 bg-white text-base lg:text-xl font-bold rounded-lg flex gap-1 items-center"
+                  >
+                    <svg
+                      width="30"
+                      height="30"
+                      viewBox="0 0 30 30"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <rect
+                        width="30"
+                        height="30"
+                        fill="url(#pattern0_288_6)"
+                      />
+                      <defs>
+                        <pattern
+                          id="pattern0_288_6"
+                          patternContentUnits="objectBoundingBox"
+                          width="1"
+                          height="1"
+                        >
+                          <use
+                            xlink:href="#image0_288_6"
+                            transform="scale(0.01)"
+                          />
+                        </pattern>
+                        <image
+                          id="image0_288_6"
+                          width="100"
+                          height="100"
+                          xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEK0lEQVR4nO2dXahlYxjH95xC5CNxaO+9/r9n7W1zpuNCOiXixncpJUWkUBMJd+TcUJrEXHAhckeUopELNwqZUlzIKGNcqEkKc0pqooyvGbP17vau08k5a6/9cd531np+9b99e9fzO+vjXft91mk0HMdxHMdxHMdxHMdxHKdaLJjZVcCDwGqF8whw/fLy8qmNFFlZWTkFeNTgsEG/LkH61aTdS0tLZzVSodlsng98Ers4FlfMt+12++LYLhpZlp0OfB67IJZCpLUsy9pRhZj0YvRCkE6AD6LJyPPckP6JXQRLLMB1UYQAT8Q+eEswSK9GEWLwXuyDtzRzKJaQL7acmLRmsL+C+a5AyB+xhHxTIOTpRgUB7ig6S6JMzIXgQlIAP0PSAheSFriQtMCFpAUuJC1wIdUTYrCnYPG5p/TEfB3CNEL2Fkjd60K29wxxIbPChSQGfobMhB3dbvecWQzkQmZTxMeR9oVtSi4kMmZ2JdLfg1/zYNWFRKTb7V5g8NO6J6BjwNXTjOmXrMlZCLtANj6SAj+0Wq3zXEgJwhbNZrN5xpRblHZvtk5AeteFlAB4ZVi0HZMUDrjB4PiWC7gse3jCseu1MATumWaMi1otGfxSVDSkv8zs8gnmVx8heZ5fZnB03TgnLMvuLrPp26TPigq2LofKbpSujRDg3P/bYoP0ZyfLrhhrTtJLJWSMbvJvlZxnLYQsIL2/xVhr7XY722oASXeWlTGKpHvHnWgthADPFBZO+nKzJ69Oq3UJ0m+TCjH43cx2jjnXaguRdOvgXjFO4aR3Nj55ZaElQvpqChmjfB3GqrWQ0OQy6EIqUTjgqQ0Fen0GMkZzfrm2QhYXF880ODhB4U5Ylt01mIP00MxkjGJ2ey2FAG9PUbijwK7wBDZzIXAk9L7USoiZPTaHQvZnldCmF9Y0tRBiZteGt66xi27FUp6rvBCgOewb6Z8E+TeXbqqskOFrjU8TKHR/7LNE+llSq5JCer3e2cDKyZZOp3NhJYVUBVxIWuBC0gIXkha4kLTAhaQFLiQtSFUIcKBg0I8S+PLb6qxj0psFx308ihCDD2OvpC3N/BhFCPBCAgffTy1hb0AUIZKuiX3wlmCAB6IIGQwsfRy7AJZQkL7v9XqnxRNitrPsb+IVzjFJN45Vt3kJCYRP2tVdCuFTh9L9Y/8hz1NIIM/zpdChVEsZcCDcT8vUa+5CRoRmGKTnh30Z+6sapH1hh76Z3TJJm9y2CXHGw4UkhgtJDBeSGC4kMVxIYriQxHAhiZGkEKAbe4Fn8XKkQMgb2y5E0qWxX3tYogGedSGkkzzLbnYhJJPDUf77m1+y2OxytWvbZbgQxu4ydiFEu5G/Ns7Pv3PDL1mMZBy0LLutEZvQCDP8wnPtAjyZS/cBy7E9OI7jOI7jOI7jOI7jOE5jzvwHj+aPmwKy5zAAAAAASUVORK5CYII="
+                        />
+                      </defs>
+                    </svg>
+                    12 Photos
+                  </p>
+                  <p
+                    class="px-3 py-2 bg-white text-base lg:text-xl font-bold rounded-lg flex gap-1 items-center"
+                  >
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                    >
+                      <rect
+                        width="40"
+                        height="40"
+                        fill="url(#pattern0_287_395)"
+                      />
+                      <defs>
+                        <pattern
+                          id="pattern0_287_395"
+                          patternContentUnits="objectBoundingBox"
+                          width="1"
+                          height="1"
+                        >
+                          <use
+                            xlink:href="#image0_287_395"
+                            transform="scale(0.01)"
+                          />
+                        </pattern>
+                        <image
+                          id="image0_287_395"
+                          width="100"
+                          height="100"
+                          xlink:href="data:image/png;base64,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"
+                        />
+                      </defs>
+                    </svg>
+
+                    Virtual tour
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-row lg:w-[25%] lg:flex-col gap-[10px]">
+                <img
+                  class="rounded-lg w-full h-[150px] lg:h-[calc(50%-5px)]"
+                  src="./images/prop-detail-small.jpg"
+                  alt=""
+                />
+                <img
+                  class="rounded-lg w-full h-[150px] lg:h-[calc(50%-5px)]"
+                  src="./images/prop-detail-small.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="mt-3 text-white">
+              <h3 class="font-bold text-xl mb-2">
+                AED 2,300,000 | EUR 575,000
+              </h3>
+              <p class="text-sm mb-1">
+                Estimated monthly mortgage payment AED 10,000 | EUR 2,500
+              </p>
+              <p class="text-[13px] mb-4">
+                *Information variable according to the current exchange rate
+              </p>
+              <p class="flex items-center text-xl mb-4">
+                <svg
+                  width="43"
+                  height="35"
+                  viewBox="0 0 43 35"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <rect width="43" height="35" fill="url(#pattern0_157_1149)" />
+                  <defs>
+                    <pattern
+                      id="pattern0_157_1149"
+                      patternContentUnits="objectBoundingBox"
+                      width="1"
+                      height="1"
+                    >
+                      <use
+                        xlink:href="#image0_157_1149"
+                        transform="matrix(0.00904393 0 0 0.0111111 0.0930233 0)"
+                      />
+                    </pattern>
+                    <image
+                      id="image0_157_1149"
+                      width="90"
+                      height="90"
+                      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEiklEQVR4nO2cTaiVRRjHn6wMU1MIsShyk1YuNAiuBmFwSd2VFSi1CtK+RN20CNwEKbrQq9620abM1rUI1xmRUdlaWtRNCFIhUzvq5fxiuCNE3PfrnGfemed95wcHLveeO/+Z58yZ+c8zM69IJpPJZDKZTK8BHgBeBU4Ap4HzwGXgpn9d9r877d/zivuf2PU2AXA/sBf4ntE5C+xxZcVuT3IADwPHgWvocRU4BjwkfQe4G9gH/E043If3PnCP9BHgMeAc7fETsEb6BPBy4F5cxBXgRekDwGvALeIxC7wlXQZ4k3TYIx0eLmZJB1eXbdIlgEeBv0gPN088Ll0AWNiyu2jKj85minWA90ifd8UyblXmV2ip44aQB8UqfllthaNiOEGkmbsIzVWTiSifhbPGbrHGmKnOWHwnlnATCzDEHkNgpVjB73Zo8o+fWCeAxf61we+sDJS1dogVfAC0mAHWlWit9+/R4phYwe/jafXkdTX01iv27K/ECsAvSo0+3kBzWknzvFgBuKTU6IkGmhuVNC+KFYAbSo1e0kBziZLmQKwAXI8Q6PuUNK+JFRRdwESEoWNGrAD8rNToEw00P1TSPCdWAL5UavTAWbcaek8qzgtfiBWA/egxUxZsH+TfFfX2ixWASXQZeJ+80bsL93raDxdaPfk2k2IF4F5/WMUaV1zdxRLAx9jjI7EG8Cz2eEYsAnyLHc4Cd4hFjPXqSbGMSzuSPnZSo0UAqxJ3IO6o2iPSBUjrFOn/2SVdAjhFenwmXQNYBPxAOrjE12LpIsyN15obqaPi6rBKugywGvgjYpD/BNZKH2Bu19rdfI3hMJ6SPsFc9q3NI71ue22T9BFgqz+7ERqnsVWM33w96rboS86y7a4oY4viZu58uLK3VNThnZKzgm5MPxL1+oW/a13FENhZUc7mQMF2ZW6u0H695oHMKYmB396ve9B8WCPYm5Rv07ogP1ehub3BlTxX3nJpG7d0bdjw2aqTmn4Y0ThDN6gxXDQJcrzlOnBmhADcrLqLDbw05hXmWzU0tvm6NOWMeiArKrpmjIPmN4AXakxOo/J2RdnPj7GhO2z1CQnAwYKK/AYsUNKYHiEQ00raC4BfCzQOamjUrYQL6HwcUNS5y90paRBkl7BaqKj/QYGOO0Nyp5ZOlRUr+lqtVtZ6ouaC5rr2nW6fkykaHksto1YFTrY5UQBTNQJ9JJD21wV6n4bQ+6/wspKFRRDrA6yoyIm4v60IpL2zQNPFYFkIzdvCb8Qw88DnJYE+FWlRtiuGdw76VQJ2lAR6e2DtT1r11DEnB2BtSaCDPtjELeNb1S7xzsHtDrC0pLFLA2uXeeoDJr1zGcCF+T5kaYHWPHWb3rkI4PA8+oekBVobNtv2ziXPZjrse/YF/7PaSnAMT33StsVJjApPvdysd06N4B0O+CbKMjRBgnnq6ImVxAjmqWN65xQJ4qlT8M4pou6p/UZpphnNh1M32TUUyTCCQYh0CNE6F2M+RaZPjBRod6Yu04ypUXMLbr8u9+xqLvlYtZZ7yWQymUwmk8lkMhnR4l8Bzwa9oKN+7gAAAABJRU5ErkJggg=="
+                    />
+                  </defs>
+                </svg>
+                Building Name, Community, City
+              </p>
+              <div class="flex gap-5 items-center mb-4">
+                <span class="text-base xl:text-xl">Property type</span>
+                <span
+                  class="text-base xl:text-xl flex items-center gap-2 xl:gap-3"
+                >
+                  <svg
+                    width="23"
+                    height="23"
+                    viewBox="0 0 23 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      width="23"
+                      height="23"
+                      fill="url(#pattern0_157_1152)"
+                    />
+                    <defs>
+                      <pattern
+                        id="pattern0_157_1152"
+                        patternContentUnits="objectBoundingBox"
+                        width="1"
+                        height="1"
+                      >
+                        <use
+                          xlink:href="#image0_157_1152"
+                          transform="scale(0.0111111)"
+                        />
+                      </pattern>
+                      <image
+                        id="image0_157_1152"
+                        width="90"
+                        height="90"
+                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmklEQVR4nO3bsU7CYBhGYXRR70CNt6huehfGqInekbrpXeiiJuDgdEyTDsS0SMnPS0vPk3QhwPf1hBQGOplIkiRJkiSNFLAPnAPPwIzxmQFPwBmwt67IJ8Drps+0R16qJuv4JBu5OXa5T3Z9uVCz05Khq2uymj2WDD1tGSKYlgytBQwdYugQQ4cYOsTQIYYOMXSIoUMMHWLoEENvUegf4AI4LjZsTvW+wGU9p7c7lBzW5rLYkAXqE+3tDiWHtDkqNmQB4LDPO5Qcst4BSxjFDqM4ySUYOsTQIYYOMfSIviekHgN2N73DVncDDoA74Ks+bqvH1r7hwHXuBlw3XOuvolsPUOduwFvDC96jWw9Q525tP1+0GkOHGDrE0CGGDjF0iKFDDB1i6BBDhxg6xNAhhg4xdIihQwwdYugQQ4cYOsTQIYYOMXSIoUMMHWLoEEOHGDrE0CGGDjF0X0Ov/ofWccDQGYbucejPhud/pBYeqs7d6hte/rqJbj1AnbvVdxc9AN/1ce9dWf9buRuwUx1LzNAcu0mSJEmTon4Bh9jA+oT3W4EAAAAASUVORK5CYII="
+                      />
+                    </defs>
+                  </svg>
+                  2 Beds</span
+                ><span
+                  class="text-base xl:text-xl flex items-center gap-2 xl:gap-3"
+                >
+                  <svg
+                    width="23"
+                    height="23"
+                    viewBox="0 0 23 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      width="23"
+                      height="23"
+                      fill="url(#pattern0_157_1153)"
+                    />
+                    <defs>
+                      <pattern
+                        id="pattern0_157_1153"
+                        patternContentUnits="objectBoundingBox"
+                        width="1"
+                        height="1"
+                      >
+                        <use
+                          xlink:href="#image0_157_1153"
+                          transform="scale(0.0111111)"
+                        />
+                      </pattern>
+                      <image
+                        id="image0_157_1153"
+                        width="90"
+                        height="90"
+                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAADU0lEQVR4nO3dzYtOURzA8TPDqDFKoRg7LxmFmCIRymaK2ShRSo0/gBU2VmxkKW8zNlNjyIKShSIl2XprVsywkZfVMDbPKA++Os1Rg3tvzz3nPPfc+5zfZzWTOs89357Oc5879x5KeQZ0AfuBEeAZ8BGYNj8PA8eB9b5fNxrAQuAsUKMxL4EjQHvoY68MYB8wiZ2nQG/oOZQa0AacAn7ipqaXm9DzKS0T2ZdfwKHQcyrrcuH6Tv7XN2Bb6LmV7YMva03+AYwC/UA30AEsNb9fN/+eZhyYF3qOpWDOLrJCZZ6+AZuAiYwxTqjYAQsyTuF05EUNjrMMeJsyjj73nqNiZr6MJNHLwYacY23NWOf7VMzMN74k1yzHu5My3nkVM/NVOkm/5XgHUsZ7qGJm1s8k3Z6Xoklgu4pVxqlZrg8vYBXwKGWsv97ZwAoVm7QaOcfYAXxpIPLsd3dcX2RcQwNrckb+4zOwWsXCJTQzF6GeYO+xHkPFwDF0H+52qxg4hh7xEHpYxcAx9BsPocdVDBxDT3sIXVMxcAktcpDQBZHQBZHQBZHQBZHQBZHQBZHQBZHQBZHQBZHQBZHQHgDzgcvAVw8Xf2I1BVwCOrNCD4U+yhYylBa53dNlTDGjlvg0g4QuKLQsHd4NZq3RncBFs6ALO/pWiguZH4ZCCCGEEMUDPlie3sTsvU3o26GPuoJu2YQ+GfqoKyj/85HArtBHXUE7ba9N10MfeYXoVl25Q5vYL0IffYU8t4psQg+GPvoKueISWm/FIxoz4BJ6bYMvIqDHJXSb5aNqsZly3oQLeBB6FhVw3ymyCX0m9Cwq4LSP0HtDz6IC9vgIvdjs4CWS6TZLnEN7fD6wVU14iWxC6529RLJRn6GPpbyIgKM+Q2+Roqk2+wytNwiUO0z/p5t0eAttYt9MeKHY3fAa2YQ+GHpWJeR/h2C9ORXwOvTMSkRv+TnXe2gT+3Do2ZVI87ZgNlfz7oaeYQnca/reTvrrpr5/gXi9a3SjWx+xeyKN/QlYV0jkWbFXRvbh+CrYjpLmCYFzTdiCvmxX565a30rgOXivPnlvsftAvpuLaRtV2QDLzV/O9QGOmTWtTvnVzbGOmf+bYMB292AhhBBCCCGEEEIIIYQQKslvNccjtVcEvmsAAAAASUVORK5CYII="
+                      />
+                    </defs>
+                  </svg>
+                  2 Baths</span
+                ><span
+                  class="text-base xl:text-xl flex items-center gap-2 xl:gap-3"
+                >
+                  <svg
+                    width="23"
+                    height="23"
+                    viewBox="0 0 23 23"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <rect
+                      width="23"
+                      height="23"
+                      fill="url(#pattern0_157_1154)"
+                    />
+                    <defs>
+                      <pattern
+                        id="pattern0_157_1154"
+                        patternContentUnits="objectBoundingBox"
+                        width="1"
+                        height="1"
+                      >
+                        <use
+                          xlink:href="#image0_157_1154"
+                          transform="scale(0.0111111)"
+                        />
+                      </pattern>
+                      <image
+                        id="image0_157_1154"
+                        width="90"
+                        height="90"
+                        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACn0lEQVR4nO2cUUsbQRSFtwpaxV9eilq1JHmx/Q19EP9Rhdo0KDFvnjJ0KCLJJjtzZnLv7PnAN8mc+2U3CTv3TtcJIYQQQgghhBBCjBgAHwF8AfALefwBcAPgpELmUwBfASwyMz/G2otn7uJCTKYVMk/JmS+6CqHn5NBLAAcF8x4AeCFnfiyV923wV3LopUPRr6Xyvg3OZuLwowOeRM8BXFX6MjwBcB2/gClYEn0ffqF0TgBwBOCHR9FuZGOgZIuizctGgmSros3KTpUcqBFuE3dbst0BOO6MELLsmNmc6F2ujnsLV/aQrOZEDy2g2xNDM5oUnVJITVKymRWdWlBpUjOZFp1TWAlyspgXnVsgi9wMLkTvWzYIa+9T9LoHM3PSb9ZjYk7Kmin1sgoI20/vuSIVfknMec14Y1PrZT1ynMYH9uFvsuujTmyX/QzgA+lh/zJXcm69FIKQFCnol71i7LZE0atcyYx69wo2y74lrvGNJdk1+Cf7Mn5chKvvFsAZ8fXPouxVXONidJJr3pLubnchhBBCCCGEEEIIIYQQQohtW1mfAfyOu8sz5u5y3L2exdcOE6+fRreVhc2bszPiGrMmNmdT2wLQ327wRNyHfCa3GxQbOu27JW/iAPsidgSxGmgWxJxPxAaapHpzCwgtAu85J7WEnRNzhvYCRktYUr2MAh7WLPyz4SbHh6H1sgpYS8//H6ltt7BoNaJXEG1BcvOjFZYkNzssZFFyc+NvliU3M9DpQXITI8oauiez5SowfSW3coyEK8mtHYxiWnIrR/24kNzK4VWtnU36H48HDE4rZPZ1wGDcuWCzdHhkJopOewE47JlIHZPol+JbWwC+k0NPHH500CZ8d51IHdvZpCv2hK8QQgghhBBCCCFE55C/Y3iDXwb67NQAAAAASUVORK5CYII="
+                      />
+                    </defs>
+                  </svg>
+                  101 Sqm</span
+                >
+              </div>
+              <p>Furnishing Status Property Status</p>
+              <p>Property reference code: 123456</p>
+              <p>DLD permit number: 123456789</p>
+            </div>
+          </div>
+          <!-- Repeat property card for more listings -->
+        </div>
+      </div>
+    </section>
+    <div class="flex items-center justify-center mb-4 space-x-4">
+      <div class="flex-grow border-t border-white"></div>
+      <h2 class="font-bold text-3xl text-white text-center whitespace-nowrap">
+        Description
+      </h2>
+      <div class="flex-grow border-t border-white"></div>
+    </div>
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <p class="text-white">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum. <br /><br />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+          <br /><br />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+    </section>
+    <div class="flex items-center justify-center mb-4 space-x-4">
+      <div class="flex-grow border-t border-white"></div>
+      <h2 class="font-bold text-3xl text-white text-center whitespace-nowrap">
+        Features
+      </h2>
+      <div class="flex-grow border-t border-white"></div>
+    </div>
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap gap-3 text-white">
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Air-Conditioning</p>
+          </div>
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Fitness Facility</p>
+          </div>
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Swimming pool</p>
+          </div>
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Balcony</p>
+          </div>
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Garden</p>
+          </div>
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Built-in-Kitchen</p>
+          </div>
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Pool View</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="flex items-center justify-center mb-4 space-x-4">
+      <div class="flex-grow border-t border-white"></div>
+      <h2 class="font-bold text-3xl text-white text-center whitespace-nowrap">
+        Location
+      </h2>
+      <div class="flex-grow border-t border-white"></div>
+    </div>
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <p class="text-white mb-7">Community, City</p>
+        <div class="w-full h-[350px] lg:h-[550px]">
+          <iframe
+            class="w-full h-full"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5274.272779869222!2d55.257811932482035!3d25.187216826826226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f69d0d69e8d93%3A0x8f0fe5aa20493ae4!2sThe%20Prism!5e0!3m2!1sen!2s!4v1722184758305!5m2!1sen!2s"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="mt-7">
+          <a class="w-[332px] h-[276px] block" href="#">
+            <p class="text-center text-white font-bold mb-1">Community Guide</p>
+            <img
+              class="rounded-lg w-full"
+              src="./images/dubai-downtown-small.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="flex items-center justify-center mt-24 mb-4 space-x-4">
+      <div class="flex-grow border-t border-white"></div>
+      <h2 class="font-bold text-3xl text-white text-center whitespace-nowrap">
+        Similar Projects
+      </h2>
+      <div class="flex-grow border-t border-white"></div>
+    </div>
+
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-end mb-4">
+          <button
+            class="border border-white duration-300 hover:bg-mwblack-400 px-8 py-2 rounded-lg text-white transform"
+          >
+            All Projects
+          </button>
+        </div>
+        <div class="flex flex-col lg:flex-row rounded-lg shadow-lg">
+          <div class="flex flex-col lg:flex-row gap-[10px]">
+            <img
+              class="rounded-lg h-[350px] lg:h-auto lg:w-[350px] xl:w-auto"
+              src="./images/prop-detail-big.jpg"
+              alt="Property"
+            />
+            <div class="flex flex-row lg:flex-col gap-[10px]">
+              <img
+                class="rounded-lg w-[calc(50%-5px)] lg:w-auto h-[150px] lg:h-[calc(50%-5px)]"
+                src="./images/prop-detail-small.jpg"
+                alt=""
+              />
+              <img
+                class="rounded-lg w-[calc(50%-5px)] lg:w-auto h-[150px] lg:h-[calc(50%-5px)]"
+                src="./images/prop-detail-small.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="lg:pl-6 mt-3 lg:mt-0 text-white">
+            <h3 class="font-bold text-xl mb-2">
+              Highlight 1 | Highlight 2 | Highlight 3
+            </h3>
+            <p class="text-white text-base mb-1">AED 2,300,000 | EUR 575,000</p>
+            <p class="text-sm mb-1">
+              Estimated monthly mortgage payment AED 10,000 | EUR 2,500
+            </p>
+            <p class="text-[13px] mb-4">
+              *Information variable according to the current exchange rate
+            </p>
+            <p class="flex items-center text-xl mb-4">
+              <svg
+                width="43"
+                height="35"
+                viewBox="0 0 43 35"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="43" height="35" fill="url(#pattern0_157_1149)" />
+                <defs>
+                  <pattern
+                    id="pattern0_157_1149"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_157_1149"
+                      transform="matrix(0.00904393 0 0 0.0111111 0.0930233 0)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_157_1149"
+                    width="90"
+                    height="90"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEiklEQVR4nO2cTaiVRRjHn6wMU1MIsShyk1YuNAiuBmFwSd2VFSi1CtK+RN20CNwEKbrQq9620abM1rUI1xmRUdlaWtRNCFIhUzvq5fxiuCNE3PfrnGfemed95wcHLveeO/+Z58yZ+c8zM69IJpPJZDKZTK8BHgBeBU4Ap4HzwGXgpn9d9r877d/zivuf2PU2AXA/sBf4ntE5C+xxZcVuT3IADwPHgWvocRU4BjwkfQe4G9gH/E043If3PnCP9BHgMeAc7fETsEb6BPBy4F5cxBXgRekDwGvALeIxC7wlXQZ4k3TYIx0eLmZJB1eXbdIlgEeBv0gPN088Ll0AWNiyu2jKj85minWA90ifd8UyblXmV2ip44aQB8UqfllthaNiOEGkmbsIzVWTiSifhbPGbrHGmKnOWHwnlnATCzDEHkNgpVjB73Zo8o+fWCeAxf61we+sDJS1dogVfAC0mAHWlWit9+/R4phYwe/jafXkdTX01iv27K/ECsAvSo0+3kBzWknzvFgBuKTU6IkGmhuVNC+KFYAbSo1e0kBziZLmQKwAXI8Q6PuUNK+JFRRdwESEoWNGrAD8rNToEw00P1TSPCdWAL5UavTAWbcaek8qzgtfiBWA/egxUxZsH+TfFfX2ixWASXQZeJ+80bsL93raDxdaPfk2k2IF4F5/WMUaV1zdxRLAx9jjI7EG8Cz2eEYsAnyLHc4Cd4hFjPXqSbGMSzuSPnZSo0UAqxJ3IO6o2iPSBUjrFOn/2SVdAjhFenwmXQNYBPxAOrjE12LpIsyN15obqaPi6rBKugywGvgjYpD/BNZKH2Bu19rdfI3hMJ6SPsFc9q3NI71ue22T9BFgqz+7ERqnsVWM33w96rboS86y7a4oY4viZu58uLK3VNThnZKzgm5MPxL1+oW/a13FENhZUc7mQMF2ZW6u0H695oHMKYmB396ve9B8WCPYm5Rv07ogP1ehub3BlTxX3nJpG7d0bdjw2aqTmn4Y0ThDN6gxXDQJcrzlOnBmhADcrLqLDbw05hXmWzU0tvm6NOWMeiArKrpmjIPmN4AXakxOo/J2RdnPj7GhO2z1CQnAwYKK/AYsUNKYHiEQ00raC4BfCzQOamjUrYQL6HwcUNS5y90paRBkl7BaqKj/QYGOO0Nyp5ZOlRUr+lqtVtZ6ouaC5rr2nW6fkykaHksto1YFTrY5UQBTNQJ9JJD21wV6n4bQ+6/wspKFRRDrA6yoyIm4v60IpL2zQNPFYFkIzdvCb8Qw88DnJYE+FWlRtiuGdw76VQJ2lAR6e2DtT1r11DEnB2BtSaCDPtjELeNb1S7xzsHtDrC0pLFLA2uXeeoDJr1zGcCF+T5kaYHWPHWb3rkI4PA8+oekBVobNtv2ziXPZjrse/YF/7PaSnAMT33StsVJjApPvdysd06N4B0O+CbKMjRBgnnq6ImVxAjmqWN65xQJ4qlT8M4pou6p/UZpphnNh1M32TUUyTCCQYh0CNE6F2M+RaZPjBRod6Yu04ypUXMLbr8u9+xqLvlYtZZ7yWQymUwmk8lkMhnR4l8Bzwa9oKN+7gAAAABJRU5ErkJggg=="
+                  />
+                </defs>
+              </svg>
+              Building Name, Community, City
+            </p>
+            <div class="flex justify-between gap-5 items-center mb-4">
+              <span class="text-base xl:text-xl">Property type</span>
+              <span
+                class="text-base xl:text-xl flex items-center gap-2 xl:gap-3"
+              >
+                <svg
+                  width="23"
+                  height="23"
+                  viewBox="0 0 23 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <rect width="23" height="23" fill="url(#pattern0_157_1152)" />
+                  <defs>
+                    <pattern
+                      id="pattern0_157_1152"
+                      patternContentUnits="objectBoundingBox"
+                      width="1"
+                      height="1"
+                    >
+                      <use
+                        xlink:href="#image0_157_1152"
+                        transform="scale(0.0111111)"
+                      />
+                    </pattern>
+                    <image
+                      id="image0_157_1152"
+                      width="90"
+                      height="90"
+                      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAABmklEQVR4nO3bsU7CYBhGYXRR70CNt6huehfGqInekbrpXeiiJuDgdEyTDsS0SMnPS0vPk3QhwPf1hBQGOplIkiRJkiSNFLAPnAPPwIzxmQFPwBmwt67IJ8Drps+0R16qJuv4JBu5OXa5T3Z9uVCz05Khq2uymj2WDD1tGSKYlgytBQwdYugQQ4cYOsTQIYYOMXSIoUMMHWLoEENvUegf4AI4LjZsTvW+wGU9p7c7lBzW5rLYkAXqE+3tDiWHtDkqNmQB4LDPO5Qcst4BSxjFDqM4ySUYOsTQIYYOMfSIviekHgN2N73DVncDDoA74Ks+bqvH1r7hwHXuBlw3XOuvolsPUOduwFvDC96jWw9Q525tP1+0GkOHGDrE0CGGDjF0iKFDDB1i6BBDhxg6xNAhhg4xdIihQwwdYugQQ4cYOsTQIYYOMXSIoUMMHWLoEEOHGDrE0CGGDjF0X0Ov/ofWccDQGYbucejPhud/pBYeqs7d6hte/rqJbj1AnbvVdxc9AN/1ce9dWf9buRuwUx1LzNAcu0mSJEmTon4Bh9jA+oT3W4EAAAAASUVORK5CYII="
+                    />
+                  </defs>
+                </svg>
+                2 Beds</span
+              ><span
+                class="text-base xl:text-xl flex items-center gap-2 xl:gap-3"
+              >
+                <svg
+                  width="23"
+                  height="23"
+                  viewBox="0 0 23 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <rect width="23" height="23" fill="url(#pattern0_157_1153)" />
+                  <defs>
+                    <pattern
+                      id="pattern0_157_1153"
+                      patternContentUnits="objectBoundingBox"
+                      width="1"
+                      height="1"
+                    >
+                      <use
+                        xlink:href="#image0_157_1153"
+                        transform="scale(0.0111111)"
+                      />
+                    </pattern>
+                    <image
+                      id="image0_157_1153"
+                      width="90"
+                      height="90"
+                      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAADU0lEQVR4nO3dzYtOURzA8TPDqDFKoRg7LxmFmCIRymaK2ShRSo0/gBU2VmxkKW8zNlNjyIKShSIl2XprVsywkZfVMDbPKA++Os1Rg3tvzz3nPPfc+5zfZzWTOs89357Oc5879x5KeQZ0AfuBEeAZ8BGYNj8PA8eB9b5fNxrAQuAsUKMxL4EjQHvoY68MYB8wiZ2nQG/oOZQa0AacAn7ipqaXm9DzKS0T2ZdfwKHQcyrrcuH6Tv7XN2Bb6LmV7YMva03+AYwC/UA30AEsNb9fN/+eZhyYF3qOpWDOLrJCZZ6+AZuAiYwxTqjYAQsyTuF05EUNjrMMeJsyjj73nqNiZr6MJNHLwYacY23NWOf7VMzMN74k1yzHu5My3nkVM/NVOkm/5XgHUsZ7qGJm1s8k3Z6Xoklgu4pVxqlZrg8vYBXwKGWsv97ZwAoVm7QaOcfYAXxpIPLsd3dcX2RcQwNrckb+4zOwWsXCJTQzF6GeYO+xHkPFwDF0H+52qxg4hh7xEHpYxcAx9BsPocdVDBxDT3sIXVMxcAktcpDQBZHQBZHQBZHQBZHQBZHQBZHQBZHQBZHQBZHQBZHQHgDzgcvAVw8Xf2I1BVwCOrNCD4U+yhYylBa53dNlTDGjlvg0g4QuKLQsHd4NZq3RncBFs6ALO/pWiguZH4ZCCCGEEMUDPlie3sTsvU3o26GPuoJu2YQ+GfqoKyj/85HArtBHXUE7ba9N10MfeYXoVl25Q5vYL0IffYU8t4psQg+GPvoKueISWm/FIxoz4BJ6bYMvIqDHJXSb5aNqsZly3oQLeBB6FhVw3ymyCX0m9Cwq4LSP0HtDz6IC9vgIvdjs4CWS6TZLnEN7fD6wVU14iWxC6529RLJRn6GPpbyIgKM+Q2+Roqk2+wytNwiUO0z/p5t0eAttYt9MeKHY3fAa2YQ+GHpWJeR/h2C9ORXwOvTMSkRv+TnXe2gT+3Do2ZVI87ZgNlfz7oaeYQnca/reTvrrpr5/gXi9a3SjWx+xeyKN/QlYV0jkWbFXRvbh+CrYjpLmCYFzTdiCvmxX565a30rgOXivPnlvsftAvpuLaRtV2QDLzV/O9QGOmTWtTvnVzbGOmf+bYMB292AhhBBCCCGEEEIIIYQQKslvNccjtVcEvmsAAAAASUVORK5CYII="
+                    />
+                  </defs>
+                </svg>
+                2 Baths</span
+              ><span
+                class="text-base xl:text-xl flex items-center gap-2 xl:gap-3"
+              >
+                <svg
+                  width="23"
+                  height="23"
+                  viewBox="0 0 23 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <rect width="23" height="23" fill="url(#pattern0_157_1154)" />
+                  <defs>
+                    <pattern
+                      id="pattern0_157_1154"
+                      patternContentUnits="objectBoundingBox"
+                      width="1"
+                      height="1"
+                    >
+                      <use
+                        xlink:href="#image0_157_1154"
+                        transform="scale(0.0111111)"
+                      />
+                    </pattern>
+                    <image
+                      id="image0_157_1154"
+                      width="90"
+                      height="90"
+                      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAACn0lEQVR4nO2cUUsbQRSFtwpaxV9eilq1JHmx/Q19EP9Rhdo0KDFvnjJ0KCLJJjtzZnLv7PnAN8mc+2U3CTv3TtcJIYQQQgghhBBCjBgAHwF8AfALefwBcAPgpELmUwBfASwyMz/G2otn7uJCTKYVMk/JmS+6CqHn5NBLAAcF8x4AeCFnfiyV923wV3LopUPRr6Xyvg3OZuLwowOeRM8BXFX6MjwBcB2/gClYEn0ffqF0TgBwBOCHR9FuZGOgZIuizctGgmSros3KTpUcqBFuE3dbst0BOO6MELLsmNmc6F2ujnsLV/aQrOZEDy2g2xNDM5oUnVJITVKymRWdWlBpUjOZFp1TWAlyspgXnVsgi9wMLkTvWzYIa+9T9LoHM3PSb9ZjYk7Kmin1sgoI20/vuSIVfknMec14Y1PrZT1ynMYH9uFvsuujTmyX/QzgA+lh/zJXcm69FIKQFCnol71i7LZE0atcyYx69wo2y74lrvGNJdk1+Cf7Mn5chKvvFsAZ8fXPouxVXONidJJr3pLubnchhBBCCCGEEEIIIYQQQohtW1mfAfyOu8sz5u5y3L2exdcOE6+fRreVhc2bszPiGrMmNmdT2wLQ327wRNyHfCa3GxQbOu27JW/iAPsidgSxGmgWxJxPxAaapHpzCwgtAu85J7WEnRNzhvYCRktYUr2MAh7WLPyz4SbHh6H1sgpYS8//H6ltt7BoNaJXEG1BcvOjFZYkNzssZFFyc+NvliU3M9DpQXITI8oauiez5SowfSW3coyEK8mtHYxiWnIrR/24kNzK4VWtnU36H48HDE4rZPZ1wGDcuWCzdHhkJopOewE47JlIHZPol+JbWwC+k0NPHH500CZ8d51IHdvZpCv2hK8QQgghhBBCCCFE55C/Y3iDXwb67NQAAAAASUVORK5CYII="
+                    />
+                  </defs>
+                </svg>
+                101 Sqm</span
+              >
+            </div>
+            <p class="text-xl font-bold mb-4 flex items-center gap-1">
+              Expected rental yield: 8%-9%
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect width="20" height="20" fill="url(#pattern0_223_136)" />
+                <defs>
+                  <pattern
+                    id="pattern0_223_136"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use xlink:href="#image0_223_136" transform="scale(0.01)" />
+                  </pattern>
+                  <image
+                    id="image0_223_136"
+                    width="100"
+                    height="100"
+                    xlink:href="data:image/png;base64,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"
+                  />
+                </defs>
+              </svg>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="flex items-center justify-center mt-24 mb-4 space-x-4">
+      <div class="flex-grow border-t border-white"></div>
+      <h2 class="font-bold text-3xl text-white text-center whitespace-nowrap">
+        Useful to know
+      </h2>
+      <div class="flex-grow border-t border-white"></div>
+    </div>
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="flex gap-12 flex-wrap">
+          <div
+            class="w-[227px] h-[227px] flex items-center justify-center relative shadow-md"
+          >
+            <h4
+              class="-translate-x-1/2 -translate-y-1/2 absolute font-bold leading-6 left-1/2 text-center text-xl top-1/2 transform"
+            >
+              DUBAI BUYERS GUIDE
+            </h4>
+            <img
+              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGR1YmFpfGVufDB8fHx8MTcxOTMxNjc0OXww&ixlib=rb-4.0.3&q=80&w=1080"
+              class="h-full object-cover w-full rounded-lg"
+            />
+          </div>
+          <div
+            class="w-[227px] h-[227px] flex items-center justify-center relative shadow-md"
+          >
+            <h4
+              class="-translate-x-1/2 -translate-y-1/2 absolute font-bold leading-6 left-1/2 text-center text-xl top-1/2 transform"
+            >
+              DUBAI BUYERS GUIDE
+            </h4>
+            <img
+              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGR1YmFpfGVufDB8fHx8MTcxOTMxNjc0OXww&ixlib=rb-4.0.3&q=80&w=1080"
+              class="h-full object-cover w-full rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12">
+      <div class="text-center">
+        <div class="flex items-center justify-center mb-4 space-x-4">
+          <div class="flex-grow border-t border-white"></div>
+          <h2
+            class="font-bold text-xl md:text-2xl lg:text-3xl text-white text-center whitespace-nowrap"
+          >
+            Can’t find what you are looking for?
+          </h2>
+          <div class="flex-grow border-t border-white"></div>
+        </div>
+        <div class="flex justify-center gap-3">
+          <button
+            class="bg-gold-500 flex items-center gap-1 justify-center text-white text-xs md:text-base px-3 lg:px-4 py-2 rounded-lg"
+          >
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="30" height="30" fill="url(#pattern0_157_1155)" />
+              <defs>
+                <pattern
+                  id="pattern0_157_1155"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_157_1155"
+                    transform="scale(0.0111111)"
+                  />
+                </pattern>
+                <image
+                  id="image0_157_1155"
+                  width="90"
+                  height="90"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAADtElEQVR4nO3cW6hmYxgH8DXMyDGGCHExTklNxs0kp1KaIZJSE2pMimSQC1duRLmZNJORKymHkQmTCxqNUqPI5gI5XCiHsUcTmUNyHsb8tNpLSnvb37cOnnet7/3Vvtx7vc//+/Za3/e8z1pFkWVZlmVZlmVZNimwCKuxDbuxF8/itOi1DQZW4Auz+wonRa+x13AINuCg/7Y5eq29hcOwxWgO4tLoNfcODsXzxvMxFkavvVewTj13RK+9N3D1COfkuezB8dE1JA9H4kvNPBZdR/Jwn+YOYGl0Lal/ytilHduj60kWVmrXquiakoRHWg56ujznR9eVHLypfQ9G15UcfNNB0L9iSXRtScFvurElurak4BfdWRldXzKqb3Vd+ST3Qf4J+l3dujX2rZQIbOo46Neja0wC7uw46Peja0wCzuk46Meja0xGC527ufyB86LrSwYe0I0N0bUlBadXbc42fYtjo2tLDra2HPTq6JqShItaDPktLIiuKVl4rYWQD2BZdC1Jw4UtBP1EdB29gOcaBn1xdA29gFPwfYOgl0TX0Bu4u0HQ10avv2+jYXW7em+Xvx9dQ2/gTPxQM+x10evvFdymvlui198reKHBBu3y6PX3Bk7Ajpphf11+iomuoTdwPn6uGfZHWBxdQ2/gJvVN4ajoGnoD6xuE/UreER896IXVbXB1PZ27eqOHfUy54Vo7ah7NYY/XD9nRIOxyxGHRqMebaDgL3zU8Z+fx3hHDvqTh7F45Mnxc5++KIcBV2N8g7A9xas1jL8WT1Yzf9qplMNx7HnEdfm8Q9q5xvq6X/wXYWM2N/Nun5YtfDBWun6PwUZVz2mvmOcYC3FyNMoxyDTijGCKswZ+a2ThbPxsXVLvr49hf/b2ji6HB7S2EPVWdjs7G5Xiq4YDP9CDvFjPTF2lyGunKG2WDrBgSrGp4gexK+d/2DE4shgLXVBsAKdqHewazv4krO74hqakPcFkxoG+Qe6WrfHzG5kE8IwrnNmxE/R+mB/H0MzNdv/ekbVMxoH72NunaXQxsp2a9NO0phgY34Cdp2VoMEZYldpG8sRj4kM5L0Qnjs0H3s/9WtUB/DPwsvaKYFGY6du8EBP1wMaHz2Xc1vPNgHC+WD74tJhVOrjptdZ8wOYry2nB4dK1JwHK82nLA5Yv30ES/k+e5Pe/lFm6nLh8+nh9DNJ+y8YP78fmYAe/EvThi3oNks05Mra3O5VPVDvm+6mdnNe9Rft2/Io+hZVmWZVmWZVmWZVmWFbP6C7iQWJhNB3m4AAAAAElFTkSuQmCC"
+                />
+              </defs>
+            </svg>
+            Give us a call
+          </button>
+          <button
+            class="bg-gold-500 flex items-center gap-1 justify-center text-white text-xs md:text-base px-3 lg:px-4 py-2 rounded-lg"
+          >
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="30" height="30" fill="url(#pattern0_157_1156)" />
+              <defs>
+                <pattern
+                  id="pattern0_157_1156"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_157_1156"
+                    transform="scale(0.0111111)"
+                  />
+                </pattern>
+                <image
+                  id="image0_157_1156"
+                  width="90"
+                  height="90"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFGElEQVR4nO2dW4hWVRTHT1laWAopTdGFsoKgIHHM6KZSFlERFVkx3YgyAzUtKagogiAskMSKrIeK6qUHs8bILvRg9BAxNel0h8oudnGY6UY501x+sWgNfOb0fed41t5nn3P2D+ZlcM5e+z/f7LP2Wv+9TZJIJBKJRCKRSCQSiaQDmACcDNwAPAS8BGwFvgT6gUH96tfvbdV/86D+zGx5Rsrh6gVwOLAC2Aj8Rn5+BTqB5cBhSZ0B9geuAd4ERnDHMPAGcDWwX1IXgAP0k7Yd/+wA7gOmJlUF2Be4HeijeCSGlRJTUiWAM4EewuMzYEFSdmRNBB4DRgkXiW0tMCkpI8BRwLuUh/eBY5MyIX+ORmmabyQtPCspA8AlwE7KyyBwRRIywE2Oc2JfyBwWJSECXKybg6owAlyehISsa8AA1WMQODcJAeC4kr74srwgjyla5EmaFlWdrkLzbN2M1IW1RW6rQ97xWSNznedb5H2ALdSPHq+FKK3C1ZVbfYl8oFGp83fgHmA+0K5L0ZOET6/U1H0IfYdRytQ+zrP3At4hfFb6aD/9ZPBSOb/JGBcRPj84bYtpjy8v61J0wbcRPle5FFoaqXnYCbSlGOdOwuc1l5aAvJW59SnHOrgEtRMpoB3qQmjxXeRlaYbxnid8lroQWswteVmQYbzTCJ8NLnaCkpLlZXbGcT8ibPpN7WfqhbNgbsZxXyF82i2FFvOg15SIf1++Zeg9Xm8ptLg6LXgkw1L1OuVglaXQLxsFtU222SnGe5Ty8KKl0JYl0bktxrqOctFtKfTXhoF1thhL3J5l4itLoa0doPOajDUF+Jby0GsptLTdLeluln9KdY/yMGAp9JCDAO9qMeY6aij0Hw4CHALmtDCub6ZmS8ePjoL8RJoJLap4H1Ojl6Gsqa54usXYbYGLbZreua45LG4x/kHApgzPewGYDpwHvEWJNiwPOw7271ZmQmBv4P4UzYeu/y5HwCm6ux0NfQtuVVRqhhglZ6aIZU4Tv580jo9o8rMnakNhKNSi0iz8eSZOShHPBD2g2XjSS3L9M1LOZwbwjFHMs0xEbpiYReHfTOwGH8iFwLNiU9iDea0npMK/YSsri4vpf70fhnN6ilBehA1BLcZ/l3mF+UR2nVPejGSJi6DaCjqj8qqLGwp055lnORQtDrGOayy4oroefdIGS9M0yDCXC3LGtMkqlvGCu4xi+QC4VHLqnPOYCnyaM5YOO2V3D3Ai8B3F0wPcDEzbgznMMOgYbXd+94eRY8lyRynlgQ5gcooPyRKjJsZtTkXWgCc7rObl4S/gbdkS6zFpOft4qi41qw0dqr2tfqmWYi+iviz3InLDTtFFMyB0PhTPiU+hj6d+jBZx/G0Z9WONV5ELqHuEwHuStfgWeWLN1udfgKO9iqxCy7nAujAInONdZBX6AerBCLCwEJFVaOnJVZ1h4MYiRZ5ekTuTmjFQ+BU/wJVU/8U3v1CRjVo/IdNV+JU+YwDfU80d3xrveXILT0TV2AKcnoSEXAiSIxfdDNyrz/iG4unVO6z9FYjSktH7JnfvPyF5qDj4k92botcCn+Ofn/Xoxi4xhXY98Z9NJvAF8Lj2FKdlOOK2ULwRjs8TDuuHpCP4q+eBs8e5GOQ58Z0BRxo8f4reBdJpdFmhOIg2aOvKjSXABcDd6sa8BTjBQ1NhphorV2tPsFvbZyLg2Lrfp0tUt/5VrNJfvPgE438PEolEIpFIJBKJRCJJSv4BTVJGZgtlT7YAAAAASUVORK5CYII="
+                />
+              </defs>
+            </svg>
+            Whatsapp us
+          </button>
+          <button
+            class="bg-gold-500 flex items-center gap-1 justify-center text-white text-xs md:text-base px-3 lg:px-4 py-2 rounded-lg"
+          >
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="30" height="30" fill="url(#pattern0_157_1185)" />
+              <defs>
+                <pattern
+                  id="pattern0_157_1185"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_157_1185"
+                    transform="scale(0.0111111)"
+                  />
+                </pattern>
+                <image
+                  id="image0_157_1185"
+                  width="90"
+                  height="90"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAADD0lEQVR4nO2dv49MURTHjy2sZTeWqFAbQq0gwjYq/4Rkg8KP0n9AolGIhMr/oBC7SCh2RWU1iNCqJH4sxjQ+cuMlBvPezJu9791zz5xPvZP5ns/e3Dd77rk7Io7jOI7jONkAbAEuAc+Ar6SlB6wAh8USwF7gBfroAifF0ErWKNmW7GK70E43e9nFnpwD3axlA+vo4ptJ2ejj2JBf/g/glOQGypDfmezJRhnyJ5ct2ShD/s5mRzbKkP/z2ZCNMmRwxvxlowwpz5m3bJQh1VnzlY0yZHjePGWjDBktc36yUYaMnjsv2ShD6mXPRzbKkPr585CNMmS8GvTLRhkyfh0LI7RY051Boo/dDcpeiWuvXjhtXN5gPVWye/HM1Q+mjV6Q3dTKjmuvXqiJQlx0O7jolnDRLeGiW8JFt4SLbo5lYBHYB2xz0fF5E3ogogVs8gTYKZrAHi+B7aINbPETOCIawRZLohVscbqkxhngdtFo+gBcA6Zd9Ph0SkQHyf9yr1XZ2GJ2QH2bKo652pONLeZKavxS8Zp2ZGOLQyU1Xh/yuuZlY4tzJTVOFzLTyUYXS0VfohO7L5FcNjp43UZfIqls0vMYmI9emDbZpF/J81EL0iqbtJyIVkj9ujcDd4fkux/uysd6w1QsRykgl5VNOhZL8mwFbgKf0MPGZSvsS9xCJ1dzFT03IMsU8B2dvHfR7ZCt6E5mW8cVaw/DGeAG8BE9ZP0wfCCJmZSPd4GFKMbGq3ti/mAJvAN2RSlEs+TiTTUMu+yIVtDweieyqdQ/vtV432PS26T9PATOAAcGHbRusE5v/EfkrErJRQhLHCypMXwur8IPZyP1T6ouefq4QaQBmqnievIgfIBmTPaXbB13Bvysj4Q1MOQ4W8juFuNhYaDGhxyb6p+EOTxJBfYG0Y+KRrDHK79a0R5+WahF3gLHRQvY51Ff/yTphU5t/3q+ST6nFJ3LlynE4GlK0ReZHM6nFB1aiGvY53k4wkomuu8rnNaMS94jGihW9oWwjxl5QK4Dq2G7SL6SHcdxHMdxpA6/ABce61RwcWHGAAAAAElFTkSuQmCC"
+                />
+              </defs>
+            </svg>
+
+            Send us your request
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-12">
+      <div class="bg-gold-500 p-5">
+        <div
+          class="gap-8 grid grid-cols-1 max-w-6xl mx-auto px-4 text-sm md:grid-cols-3"
+        >
+          <div>
+            <h3 class="text-xl font-bold">BUY</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/off-plan-properties">READY PROPERTIES</a>
+              </li>
+              <li>
+                <a href="/secondary-market-properties">OFF PLAN PROPERTIES</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">SELL</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/dubai-buyers-guide">LIST YOUR PROPERTY</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">GUIDES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">COMMUNITIES IN DUBAI</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">BUYERS GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">SELLERS GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">LANDLORD GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">MORTGAGE GUIDE</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">SERVICES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">RENTAL SERVICE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">MORTGAGE SERVICE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">LEGAL SERVICE</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">EUROPEAN PROPERTIES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">PROPERTIES TO SELL</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">ABOUT</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">ABOUT US</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">CAREER</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-extralight max-w-6xl mt-8 mx-auto px-4 text-center text-gold-500 text-sm w-full md:mt-12"
+      >
+        <p class="mb-2">
+          <a href="/terms-and-conditions">Terms and Conditions</a> |
+          <a href="/privacy-policy">Privacy Policy</a> |
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/contact">Contact</a>
+        </p>
+        <p class="mb-2">
+          © 2024 Maas & Weber International Real Estate Broker LLC, All rights
+          reserved.
+        </p>
+        <p>
+          A limited liability company with a registered office in Dubai UAE.
+          Registration number: 1123095
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

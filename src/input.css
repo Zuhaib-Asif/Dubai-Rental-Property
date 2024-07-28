@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer utilities {
+  /* Custom CSS for the dropdown */
+  .select-items div:hover,
+  .same-as-selected {
+    background-color: rgb(185, 154, 69); /* Golden color */
+  }
+
   .bg-mwblack-500 {
     background-color: #1f1e1e;
   }

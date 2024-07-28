@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Maas & Weber International Real Estate Broker</title>
+    <link href="./output.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body class="bg-mwblack-500 font-sans text-gray-900">
+    <header
+      class="flex items-center justify-between px-5 py-3 shadow-md text-gold-500 lg:py-7"
+    >
+      <a
+        href="index.html"
+        class="divide-x divide-gold-500 flex w-64 xl:w-full"
+        id="left"
+      >
+        <img src="images/maas-weber-logo.svg" class="h-11 mr-2 text-gold-500" />
+        <div
+          class="flex flex-col divide-gold-500 font-semibold justify-center px-2 text-[10px]"
+        >
+          <p>DUBAI</p>
+          <p>DÜSSELDORF</p>
+          <p>MÜNCHEN</p>
+        </div>
+      </a>
+      <div id="right">
+        <div class="flex justify-end lg:mb-4" id="language">
+          <div class="inline-block relative text-left z-50">
+            <button
+              id="languageButton"
+              class="focus:outline-none font-medium hover:bg-mwblack-500 inline-flex items-center justify-center py-2 rounded-md shadow-sm text-sm w-full"
+            >
+              <img
+                id="selectedFlag"
+                src="images/flag-uk.svg"
+                alt="UK flag"
+                class="mr-2 w-5 h-5"
+              /><span id="selectedLanguage">English</span>
+              <svg
+                class="-mr-1 h-5 ml-2 text-gold-500 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </button>
+            <div
+              id="languageDropdown"
+              class="absolute bg-mwblack-500 focus:outline-none hidden right-0 ring-1 ring-black ring-opacity-5 rounded-md shadow-lg w-56"
+            >
+              <div class="py-1" role="menu" aria-orientation="vertical">
+                <button
+                  class="block hover:bg-mwblack-500 px-4 py-2 text-left text-sm w-full"
+                  role="menuitem"
+                  data-lang="English"
+                  data-flag="images/flag-uk.svg"
+                >
+                  <img
+                    src="images/flag-uk.svg"
+                    alt="UK flag"
+                    class="mr-2 inline-block w-5 h-5"
+                  />
+                  English
+                </button>
+                <button
+                  class="block hover:bg-mwblack-500 px-4 py-2 text-left text-sm w-full"
+                  role="menuitem"
+                  data-lang="Deutsch"
+                  data-flag="images/flag-de.svg"
+                >
+                  <img
+                    src="images/flag-de.svg"
+                    alt="German flag"
+                    class="mr-2 inline-block w-5 h-5"
+                  />
+                  Deutsch
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <nav class="bg-mwblack-500 relative">
+          <div class="flex justify-end">
+            <!-- Burger menu button (visible on mobile, hidden on lg and above) -->
+            <button
+              id="burger-menu"
+              class="focus:outline-none hover:text-gray-300 lg:hidden text-white"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                class="h-7 w-7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                  class="burger-icon"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                  class="close-icon hidden"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <!-- Desktop menu (hidden on mobile, visible on lg and above) -->
+          <ul
+            class="hidden items-center justify-end space-x-4 text-sm uppercase lg:flex"
+          >
+            <li>
+              <a
+                href="#buy"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Buy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sell"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Sell</a
+              >
+            </li>
+            <li>
+              <a
+                href="#guides"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Guides</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#european-properties"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >European Properties</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="duration-300 hover:bg-gold-500 hover:text-white p-2 rounded-md transform truncate"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="bg-gold-500 duration-300 hover:bg-gold-400 p-2 rounded-md text-white transform truncate"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div
+          id="mobile-menu"
+          class="bg-mwblack-500 bg-opacity-90 bottom-0 fixed hidden pt-4 right-0 top-20 w-96 z-30"
+        >
+          <ul class="text-center text-sm uppercase">
+            <li>
+              <a
+                href="#buy"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Buy</a
+              >
+            </li>
+            <li>
+              <a
+                href="#sell"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Sell</a
+              >
+            </li>
+            <li>
+              <a
+                href="#guides"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Guides</a
+              >
+            </li>
+            <li>
+              <a
+                href="#services"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                href="#european-properties"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >European Properties</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="block px-4 py-2 hover:bg-gold-500 hover:text-white"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section id="hero" class="relative">
+      <p
+        class="top-11 left-16 text-gold-500 text-2xl lg:text-[40px] font-extrabold absolute gap-8 justify-center transform"
+        id="buttons"
+      >
+        Limited availability!
+      </p>
+      <img src="./images/claydon-house.jpg" class="w-full h-96 object-cover" />
+      <div
+        class="-translate-x-1/2 -translate-y-1/2 absolute font-bold left-1/2 text-center text-white top-1/2 transform w-full mb-4"
+      >
+        <div class="flex items-center justify-center ml-0">
+          <div class="flex-grow border-t border-white"></div>
+          <h2
+            class="font-bold text-3xl text-white text-center whitespace-nowrap"
+          >
+            CLAYDON HOUSE
+          </h2>
+          <div class="flex-grow border-t border-white"></div>
+        </div>
+        <p class="font-normal text-[30px]">Mohammed bin Rashid City</p>
+      </div>
+      <div
+        class="-translate-x-1/2 absolute bottom-0 flex gap-8 justify-center left-1/2 mb-10 transform w-full"
+        id="buttons"
+      >
+        <button
+          class="bg-gold-500 border border-white duration-300 font-semibold hover:bg-gold-400 p-4 rounded-lg text-base text-white transform sm:px-6 sm:text-lg"
+        >
+          Register Interest
+        </button>
+      </div>
+    </section>
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row justify-center gap-10 mt-20">
+          <p
+            class="bg-gold-500 font-bold py-10 px-6 rounded-lg text-center text-white text-3xl"
+          >
+            Starting from <br />
+            <span class="text-[40px] pt-2 block"> AED 4,392,828</span>
+          </p>
+          <p
+            class="bg-gold-500 font-bold py-10 px-6 rounded-lg text-center text-white text-3xl"
+          >
+            Completion Date <br />
+            <span class="text-[40px] pt-2 block"> Q2 2027</span>
+          </p>
+          <p
+            class="bg-gold-500 font-bold py-10 px-6 rounded-lg text-center text-white text-3xl"
+          >
+            Payment Plan <br />
+            <span class="text-[40px] pt-2 block"> 70 / 30</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex items-center justify-center mt-10 mb-4 space-x-4">
+      <div class="flex-grow border-t border-white"></div>
+      <h2 class="font-bold text-3xl text-white text-center whitespace-nowrap">
+        Elevating Urban Luxury
+      </h2>
+      <div class="flex-grow border-t border-white"></div>
+    </div>
+
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="w-full">
+          <div class="mb-4">
+            <span class="font-bold mb-4 text-gold-500 text-xl">EXPERIENCE</span>
+            <span class="text-white mb-4"
+              >the pinnacle of city living at Claydon House, a striking
+              high-rise in the heart of a vibrant community. This architectural
+              marvel offers breathtaking panoramas of Downtown Dubai’s skyline
+              and the serene Ras Al Khor Wildlife Sanctuary
+            </span>
+          </div>
+          <p class="text-white mb-12">
+            At Claydon House, residents enjoy direct access to a peaceful
+            lagoon, providing a natural retreat from the bustling city life. The
+            property boasts state-of-the-art fitness facilities and thoughtfully
+            designed communal spaces that promote social interaction and foster
+            a strong sense of community. Catering to diverse lifestyles, Claydon
+            House offers versatile living options ranging from 1 to 4-bedrooms
+            apartments, ensuring there’s perfect home for every need.
+          </p>
+          <ul>
+            <li class="text-white mb-4 list-none">
+              Amenities:
+              <ul>
+                <li class="list-disc list-inside ml-2">
+                  Lobby lounge and workstation
+                </li>
+                <li class="list-disc list-inside ml-2">
+                  Retail and community promenade
+                </li>
+                <li class="list-disc list-inside ml-2">
+                  Crystal lagoon access
+                </li>
+                <li class="list-disc list-inside ml-2">
+                  Infinity-edge leisure pool and lounge
+                </li>
+                <li class="list-disc list-inside ml-2">Adult lap pool</li>
+                <li class="list-disc list-inside ml-2">Cinema room</li>
+                <li class="list-disc list-inside ml-2">Arcade room</li>
+                <li class="list-disc list-inside ml-2">Karaoke room</li>
+                <li class="list-disc list-inside ml-2">Fitness studio</li>
+                <li class="list-disc list-inside ml-2">
+                  Indoor and outdoor kids play area
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row gap-[10px] lg:h-[600px]">
+          <div class="lg:w-3/4 relative">
+            <img
+              class="rounded-lg h-[350px] lg:h-full w-full"
+              src="./images/prop-detail-big.jpg"
+              alt="Property"
+            />
+            <div
+              class="flex gap-5 lg:gap-10 items-center absolute bottom-3 left-6"
+            >
+              <p
+                class="px-3 py-2 bg-white text-base lg:text-xl font-bold rounded-lg flex gap-1 items-center"
+              >
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <rect width="30" height="30" fill="url(#pattern0_288_6)" />
+                  <defs>
+                    <pattern
+                      id="pattern0_288_6"
+                      patternContentUnits="objectBoundingBox"
+                      width="1"
+                      height="1"
+                    >
+                      <use xlink:href="#image0_288_6" transform="scale(0.01)" />
+                    </pattern>
+                    <image
+                      id="image0_288_6"
+                      width="100"
+                      height="100"
+                      xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEK0lEQVR4nO2dXahlYxjH95xC5CNxaO+9/r9n7W1zpuNCOiXixncpJUWkUBMJd+TcUJrEXHAhckeUopELNwqZUlzIKGNcqEkKc0pqooyvGbP17vau08k5a6/9cd531np+9b99e9fzO+vjXft91mk0HMdxHMdxHMdxHMdxHKdaLJjZVcCDwGqF8whw/fLy8qmNFFlZWTkFeNTgsEG/LkH61aTdS0tLZzVSodlsng98Ers4FlfMt+12++LYLhpZlp0OfB67IJZCpLUsy9pRhZj0YvRCkE6AD6LJyPPckP6JXQRLLMB1UYQAT8Q+eEswSK9GEWLwXuyDtzRzKJaQL7acmLRmsL+C+a5AyB+xhHxTIOTpRgUB7ig6S6JMzIXgQlIAP0PSAheSFriQtMCFpAUuJC1wIdUTYrCnYPG5p/TEfB3CNEL2Fkjd60K29wxxIbPChSQGfobMhB3dbvecWQzkQmZTxMeR9oVtSi4kMmZ2JdLfg1/zYNWFRKTb7V5g8NO6J6BjwNXTjOmXrMlZCLtANj6SAj+0Wq3zXEgJwhbNZrN5xpRblHZvtk5AeteFlAB4ZVi0HZMUDrjB4PiWC7gse3jCseu1MATumWaMi1otGfxSVDSkv8zs8gnmVx8heZ5fZnB03TgnLMvuLrPp26TPigq2LofKbpSujRDg3P/bYoP0ZyfLrhhrTtJLJWSMbvJvlZxnLYQsIL2/xVhr7XY722oASXeWlTGKpHvHnWgthADPFBZO+nKzJ69Oq3UJ0m+TCjH43cx2jjnXaguRdOvgXjFO4aR3Nj55ZaElQvpqChmjfB3GqrWQ0OQy6EIqUTjgqQ0Fen0GMkZzfrm2QhYXF880ODhB4U5Ylt01mIP00MxkjGJ2ey2FAG9PUbijwK7wBDZzIXAk9L7USoiZPTaHQvZnldCmF9Y0tRBiZteGt66xi27FUp6rvBCgOewb6Z8E+TeXbqqskOFrjU8TKHR/7LNE+llSq5JCer3e2cDKyZZOp3NhJYVUBVxIWuBC0gIXkha4kLTAhaQFLiQtSFUIcKBg0I8S+PLb6qxj0psFx308ihCDD2OvpC3N/BhFCPBCAgffTy1hb0AUIZKuiX3wlmCAB6IIGQwsfRy7AJZQkL7v9XqnxRNitrPsb+IVzjFJN45Vt3kJCYRP2tVdCuFTh9L9Y/8hz1NIIM/zpdChVEsZcCDcT8vUa+5CRoRmGKTnh30Z+6sapH1hh76Z3TJJm9y2CXHGw4UkhgtJDBeSGC4kMVxIYriQxHAhiZGkEKAbe4Fn8XKkQMgb2y5E0qWxX3tYogGedSGkkzzLbnYhJJPDUf77m1+y2OxytWvbZbgQxu4ydiFEu5G/Ns7Pv3PDL1mMZBy0LLutEZvQCDP8wnPtAjyZS/cBy7E9OI7jOI7jOI7jOI7jOE5jzvwHj+aPmwKy5zAAAAAASUVORK5CYII="
+                    />
+                  </defs>
+                </svg>
+                12 Photos
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-row lg:w-[25%] lg:flex-col gap-[10px]">
+            <img
+              class="rounded-lg w-full h-[150px] lg:h-[calc(50%-5px)]"
+              src="./images/prop-detail-small.jpg"
+              alt=""
+            />
+            <img
+              class="rounded-lg w-full h-[150px] lg:h-[calc(50%-5px)]"
+              src="./images/prop-detail-small.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex items-center justify-center mb-4 space-x-4">
+      <div class="flex-grow border-t border-white"></div>
+      <h2 class="font-bold text-3xl text-white text-center whitespace-nowrap">
+        Features
+      </h2>
+      <div class="flex-grow border-t border-white"></div>
+    </div>
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap gap-3 text-white">
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Air-Conditioning</p>
+          </div>
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Fitness Facility</p>
+          </div>
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Arcade room</p>
+          </div>
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Balcony</p>
+          </div>
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Swimming pool</p>
+          </div>
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Karaoke room</p>
+          </div>
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Built-in-Kitchen</p>
+          </div>
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Cinema Room</p>
+          </div>
+          <div
+            class="flex items-center gap-3 w-full md:w-[calc(50%-12px)] lg:w-[calc(33%-12px)]"
+          >
+            <img src="./images/Checkmark.svg" alt="" />
+            <p>Kids play area</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex items-center justify-center mb-4 space-x-4">
+      <div class="flex-grow border-t border-white"></div>
+      <h2 class="font-bold text-3xl text-white text-center whitespace-nowrap">
+        Location
+      </h2>
+      <div class="flex-grow border-t border-white"></div>
+    </div>
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <p class="text-white mb-7 font-bold text-xl">
+          MOHAMMED BIN RASHID CITY, DUBAI
+        </p>
+        <div>
+          <img src="./images/image 42.jpg" alt="" />
+        </div>
+        <div class="mt-7">
+          <a class="w-[332px] h-[276px] block" href="#">
+            <p class="text-center text-white font-bold mb-1">Community Guide</p>
+            <img
+              class="rounded-lg w-full"
+              src="./images/dubai-downtown-small.jpg"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-center mb-4 space-x-4">
+          <div class="flex-grow border-t border-white"></div>
+          <h2
+            class="font-bold text-3xl text-white text-center whitespace-nowrap"
+          >
+            New Projects
+          </h2>
+          <div class="flex-grow border-t border-white"></div>
+        </div>
+        <div class="flex justify-end mb-4">
+          <button
+            class="border border-white duration-300 hover:bg-mwblack-400 px-4 py-2 rounded-lg text-white transform"
+          >
+            More Projects
+          </button>
+        </div>
+        <div class="gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <img
+              src="images/sample-image-1.png"
+              alt="Project 1"
+              class="aspect-[4/3] object-cover rounded-lg w-full"
+            />
+            <div class="pt-5">
+              <p class="text-base text-white">
+                From AED 2,300,000 | EUR 575,000*
+              </p>
+              <p class="mb-2 text-white text-xs">
+                *Information variable according to the current exchange rate
+              </p>
+              <h3 class="font-bold mb-2 text-white text-xs">
+                Project Name, Community, City
+              </h3>
+              <p class="text-sm text-white">
+                Highlight 1 | Highlight 2 | Highlight 3
+              </p>
+              <div class="flex items-center mt-4">
+                <span class="text-sm text-white"
+                  >Expected rental yield: 8%-9%</span
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="images/sample-image-1.png"
+              alt="Project 1"
+              class="aspect-[4/3] object-cover rounded-lg w-full"
+            />
+            <div class="pt-5">
+              <p class="text-base text-white">
+                From AED 2,300,000 | EUR 575,000*
+              </p>
+              <p class="mb-2 text-white text-xs">
+                *Information variable according to the current exchange rate
+              </p>
+              <h3 class="font-bold mb-2 text-white text-xs">
+                Project Name, Community, City
+              </h3>
+              <p class="text-sm text-white">
+                Highlight 1 | Highlight 2 | Highlight 3
+              </p>
+              <div class="flex items-center mt-4">
+                <span class="text-sm text-white"
+                  >Expected rental yield: 8%-9%</span
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="images/sample-image-1.png"
+              alt="Project 1"
+              class="aspect-[4/3] object-cover rounded-lg w-full"
+            />
+            <div class="pt-5">
+              <p class="text-base text-white">
+                From AED 2,300,000 | EUR 575,000*
+              </p>
+              <p class="mb-2 text-white text-xs">
+                *Information variable according to the current exchange rate
+              </p>
+              <h3 class="font-bold mb-2 text-white text-xs">
+                Project Name, Community, City
+              </h3>
+              <p class="text-sm text-white">
+                Highlight 1 | Highlight 2 | Highlight 3
+              </p>
+              <div class="flex items-center mt-4">
+                <span class="text-sm text-white"
+                  >Expected rental yield: 8%-9%</span
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src="images/sample-image-1.png"
+              alt="Project 1"
+              class="aspect-[4/3] object-cover rounded-lg w-full"
+            />
+            <div class="pt-5">
+              <p class="text-base text-white">
+                From AED 2,300,000 | EUR 575,000*
+              </p>
+              <p class="mb-2 text-white text-xs">
+                *Information variable according to the current exchange rate
+              </p>
+              <h3 class="font-bold mb-2 text-white text-xs">
+                Project Name, Community, City
+              </h3>
+              <p class="text-sm text-white">
+                Highlight 1 | Highlight 2 | Highlight 3
+              </p>
+              <div class="flex items-center mt-4">
+                <span class="text-sm text-white"
+                  >Expected rental yield: 8%-9%</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="flex items-center justify-center mt-24 mb-4 space-x-4">
+      <div class="flex-grow border-t border-white"></div>
+      <h2 class="font-bold text-3xl text-white text-center whitespace-nowrap">
+        Useful to know
+      </h2>
+      <div class="flex-grow border-t border-white"></div>
+    </div>
+    <section class="mt-10 p-5">
+      <div class="container mx-auto px-4">
+        <div class="flex gap-12 flex-wrap">
+          <div
+            class="w-[227px] h-[227px] flex items-center justify-center relative shadow-md"
+          >
+            <h4
+              class="-translate-x-1/2 -translate-y-1/2 absolute font-bold leading-6 left-1/2 text-center text-xl top-1/2 transform"
+            >
+              DUBAI BUYERS GUIDE
+            </h4>
+            <img
+              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGR1YmFpfGVufDB8fHx8MTcxOTMxNjc0OXww&ixlib=rb-4.0.3&q=80&w=1080"
+              class="h-full object-cover w-full rounded-lg"
+            />
+          </div>
+          <div
+            class="w-[227px] h-[227px] flex items-center justify-center relative shadow-md"
+          >
+            <h4
+              class="-translate-x-1/2 -translate-y-1/2 absolute font-bold leading-6 left-1/2 text-center text-xl top-1/2 transform"
+            >
+              DUBAI BUYERS GUIDE
+            </h4>
+            <img
+              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wyMDkyMnwwfDF8c2VhcmNofDJ8fGR1YmFpfGVufDB8fHx8MTcxOTMxNjc0OXww&ixlib=rb-4.0.3&q=80&w=1080"
+              class="h-full object-cover w-full rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12">
+      <div class="text-center">
+        <div class="flex items-center justify-center mb-4 space-x-4">
+          <div class="flex-grow border-t border-white"></div>
+          <h2
+            class="font-bold text-xl md:text-2xl lg:text-3xl text-white text-center whitespace-nowrap"
+          >
+            Can’t find what you are looking for?
+          </h2>
+          <div class="flex-grow border-t border-white"></div>
+        </div>
+        <div class="flex justify-center gap-3">
+          <button
+            class="bg-gold-500 flex items-center gap-1 justify-center text-white text-xs md:text-base px-3 lg:px-4 py-2 rounded-lg"
+          >
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="30" height="30" fill="url(#pattern0_157_1155)" />
+              <defs>
+                <pattern
+                  id="pattern0_157_1155"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_157_1155"
+                    transform="scale(0.0111111)"
+                  />
+                </pattern>
+                <image
+                  id="image0_157_1155"
+                  width="90"
+                  height="90"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAADtElEQVR4nO3cW6hmYxgH8DXMyDGGCHExTklNxs0kp1KaIZJSE2pMimSQC1duRLmZNJORKymHkQmTCxqNUqPI5gI5XCiHsUcTmUNyHsb8tNpLSnvb37cOnnet7/3Vvtx7vc//+/Za3/e8z1pFkWVZlmVZlmVZNimwCKuxDbuxF8/itOi1DQZW4Auz+wonRa+x13AINuCg/7Y5eq29hcOwxWgO4tLoNfcODsXzxvMxFkavvVewTj13RK+9N3D1COfkuezB8dE1JA9H4kvNPBZdR/Jwn+YOYGl0Lal/ytilHduj60kWVmrXquiakoRHWg56ujznR9eVHLypfQ9G15UcfNNB0L9iSXRtScFvurElurak4BfdWRldXzKqb3Vd+ST3Qf4J+l3dujX2rZQIbOo46Neja0wC7uw46Peja0wCzuk46Meja0xGC527ufyB86LrSwYe0I0N0bUlBadXbc42fYtjo2tLDra2HPTq6JqShItaDPktLIiuKVl4rYWQD2BZdC1Jw4UtBP1EdB29gOcaBn1xdA29gFPwfYOgl0TX0Bu4u0HQ10avv2+jYXW7em+Xvx9dQ2/gTPxQM+x10evvFdymvlui198reKHBBu3y6PX3Bk7Ajpphf11+iomuoTdwPn6uGfZHWBxdQ2/gJvVN4ajoGnoD6xuE/UreER896IXVbXB1PZ27eqOHfUy54Vo7ah7NYY/XD9nRIOxyxGHRqMebaDgL3zU8Z+fx3hHDvqTh7F45Mnxc5++KIcBV2N8g7A9xas1jL8WT1Yzf9qplMNx7HnEdfm8Q9q5xvq6X/wXYWM2N/Nun5YtfDBWun6PwUZVz2mvmOcYC3FyNMoxyDTijGCKswZ+a2ThbPxsXVLvr49hf/b2ji6HB7S2EPVWdjs7G5Xiq4YDP9CDvFjPTF2lyGunKG2WDrBgSrGp4gexK+d/2DE4shgLXVBsAKdqHewazv4krO74hqakPcFkxoG+Qe6WrfHzG5kE8IwrnNmxE/R+mB/H0MzNdv/ekbVMxoH72NunaXQxsp2a9NO0phgY34Cdp2VoMEZYldpG8sRj4kM5L0Qnjs0H3s/9WtUB/DPwsvaKYFGY6du8EBP1wMaHz2Xc1vPNgHC+WD74tJhVOrjptdZ8wOYry2nB4dK1JwHK82nLA5Yv30ES/k+e5Pe/lFm6nLh8+nh9DNJ+y8YP78fmYAe/EvThi3oNks05Mra3O5VPVDvm+6mdnNe9Rft2/Io+hZVmWZVmWZVmWZVmWFbP6C7iQWJhNB3m4AAAAAElFTkSuQmCC"
+                />
+              </defs>
+            </svg>
+            Give us a call
+          </button>
+          <button
+            class="bg-gold-500 flex items-center gap-1 justify-center text-white text-xs md:text-base px-3 lg:px-4 py-2 rounded-lg"
+          >
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="30" height="30" fill="url(#pattern0_157_1156)" />
+              <defs>
+                <pattern
+                  id="pattern0_157_1156"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_157_1156"
+                    transform="scale(0.0111111)"
+                  />
+                </pattern>
+                <image
+                  id="image0_157_1156"
+                  width="90"
+                  height="90"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFGElEQVR4nO2dW4hWVRTHT1laWAopTdGFsoKgIHHM6KZSFlERFVkx3YgyAzUtKagogiAskMSKrIeK6qUHs8bILvRg9BAxNel0h8oudnGY6UY501x+sWgNfOb0fed41t5nn3P2D+ZlcM5e+z/f7LP2Wv+9TZJIJBKJRCKRSCQSiaQDmACcDNwAPAS8BGwFvgT6gUH96tfvbdV/86D+zGx5Rsrh6gVwOLAC2Aj8Rn5+BTqB5cBhSZ0B9geuAd4ERnDHMPAGcDWwX1IXgAP0k7Yd/+wA7gOmJlUF2Be4HeijeCSGlRJTUiWAM4EewuMzYEFSdmRNBB4DRgkXiW0tMCkpI8BRwLuUh/eBY5MyIX+ORmmabyQtPCspA8AlwE7KyyBwRRIywE2Oc2JfyBwWJSECXKybg6owAlyehISsa8AA1WMQODcJAeC4kr74srwgjyla5EmaFlWdrkLzbN2M1IW1RW6rQ97xWSNznedb5H2ALdSPHq+FKK3C1ZVbfYl8oFGp83fgHmA+0K5L0ZOET6/U1H0IfYdRytQ+zrP3At4hfFb6aD/9ZPBSOb/JGBcRPj84bYtpjy8v61J0wbcRPle5FFoaqXnYCbSlGOdOwuc1l5aAvJW59SnHOrgEtRMpoB3qQmjxXeRlaYbxnid8lroQWswteVmQYbzTCJ8NLnaCkpLlZXbGcT8ibPpN7WfqhbNgbsZxXyF82i2FFvOg15SIf1++Zeg9Xm8ptLg6LXgkw1L1OuVglaXQLxsFtU222SnGe5Ty8KKl0JYl0bktxrqOctFtKfTXhoF1thhL3J5l4itLoa0doPOajDUF+Jby0GsptLTdLeluln9KdY/yMGAp9JCDAO9qMeY6aij0Hw4CHALmtDCub6ZmS8ePjoL8RJoJLap4H1Ojl6Gsqa54usXYbYGLbZreua45LG4x/kHApgzPewGYDpwHvEWJNiwPOw7271ZmQmBv4P4UzYeu/y5HwCm6ux0NfQtuVVRqhhglZ6aIZU4Tv580jo9o8rMnakNhKNSi0iz8eSZOShHPBD2g2XjSS3L9M1LOZwbwjFHMs0xEbpiYReHfTOwGH8iFwLNiU9iDea0npMK/YSsri4vpf70fhnN6ilBehA1BLcZ/l3mF+UR2nVPejGSJi6DaCjqj8qqLGwp055lnORQtDrGOayy4oroefdIGS9M0yDCXC3LGtMkqlvGCu4xi+QC4VHLqnPOYCnyaM5YOO2V3D3Ai8B3F0wPcDEzbgznMMOgYbXd+94eRY8lyRynlgQ5gcooPyRKjJsZtTkXWgCc7rObl4S/gbdkS6zFpOft4qi41qw0dqr2tfqmWYi+iviz3InLDTtFFMyB0PhTPiU+hj6d+jBZx/G0Z9WONV5ELqHuEwHuStfgWeWLN1udfgKO9iqxCy7nAujAInONdZBX6AerBCLCwEJFVaOnJVZ1h4MYiRZ5ekTuTmjFQ+BU/wJVU/8U3v1CRjVo/IdNV+JU+YwDfU80d3xrveXILT0TV2AKcnoSEXAiSIxfdDNyrz/iG4unVO6z9FYjSktH7JnfvPyF5qDj4k92botcCn+Ofn/Xoxi4xhXY98Z9NJvAF8Lj2FKdlOOK2ULwRjs8TDuuHpCP4q+eBs8e5GOQ58Z0BRxo8f4reBdJpdFmhOIg2aOvKjSXABcDd6sa8BTjBQ1NhphorV2tPsFvbZyLg2Lrfp0tUt/5VrNJfvPgE438PEolEIpFIJBKJRCJJSv4BTVJGZgtlT7YAAAAASUVORK5CYII="
+                />
+              </defs>
+            </svg>
+            Whatsapp us
+          </button>
+          <button
+            class="bg-gold-500 flex items-center gap-1 justify-center text-white text-xs md:text-base px-3 lg:px-4 py-2 rounded-lg"
+          >
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="30" height="30" fill="url(#pattern0_157_1185)" />
+              <defs>
+                <pattern
+                  id="pattern0_157_1185"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_157_1185"
+                    transform="scale(0.0111111)"
+                  />
+                </pattern>
+                <image
+                  id="image0_157_1185"
+                  width="90"
+                  height="90"
+                  xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAADD0lEQVR4nO2dv49MURTHjy2sZTeWqFAbQq0gwjYq/4Rkg8KP0n9AolGIhMr/oBC7SCh2RWU1iNCqJH4sxjQ+cuMlBvPezJu9791zz5xPvZP5ns/e3Dd77rk7Io7jOI7jONkAbAEuAc+Ar6SlB6wAh8USwF7gBfroAifF0ErWKNmW7GK70E43e9nFnpwD3axlA+vo4ptJ2ejj2JBf/g/glOQGypDfmezJRhnyJ5ct2ShD/s5mRzbKkP/z2ZCNMmRwxvxlowwpz5m3bJQh1VnzlY0yZHjePGWjDBktc36yUYaMnjsv2ShD6mXPRzbKkPr585CNMmS8GvTLRhkyfh0LI7RY051Boo/dDcpeiWuvXjhtXN5gPVWye/HM1Q+mjV6Q3dTKjmuvXqiJQlx0O7jolnDRLeGiW8JFt4SLbo5lYBHYB2xz0fF5E3ogogVs8gTYKZrAHi+B7aINbPETOCIawRZLohVscbqkxhngdtFo+gBcA6Zd9Ph0SkQHyf9yr1XZ2GJ2QH2bKo652pONLeZKavxS8Zp2ZGOLQyU1Xh/yuuZlY4tzJTVOFzLTyUYXS0VfohO7L5FcNjp43UZfIqls0vMYmI9emDbZpF/J81EL0iqbtJyIVkj9ujcDd4fkux/uysd6w1QsRykgl5VNOhZL8mwFbgKf0MPGZSvsS9xCJ1dzFT03IMsU8B2dvHfR7ZCt6E5mW8cVaw/DGeAG8BE9ZP0wfCCJmZSPd4GFKMbGq3ti/mAJvAN2RSlEs+TiTTUMu+yIVtDweieyqdQ/vtV432PS26T9PATOAAcGHbRusE5v/EfkrErJRQhLHCypMXwur8IPZyP1T6ouefq4QaQBmqnievIgfIBmTPaXbB13Bvysj4Q1MOQ4W8juFuNhYaDGhxyb6p+EOTxJBfYG0Y+KRrDHK79a0R5+WahF3gLHRQvY51Ff/yTphU5t/3q+ST6nFJ3LlynE4GlK0ReZHM6nFB1aiGvY53k4wkomuu8rnNaMS94jGihW9oWwjxl5QK4Dq2G7SL6SHcdxHMdxpA6/ABce61RwcWHGAAAAAElFTkSuQmCC"
+                />
+              </defs>
+            </svg>
+
+            Send us your request
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-12">
+      <div class="bg-gold-500 p-5">
+        <div
+          class="gap-8 grid grid-cols-1 max-w-6xl mx-auto px-4 text-sm md:grid-cols-3"
+        >
+          <div>
+            <h3 class="text-xl font-bold">BUY</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/off-plan-properties">READY PROPERTIES</a>
+              </li>
+              <li>
+                <a href="/secondary-market-properties">OFF PLAN PROPERTIES</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">SELL</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/dubai-buyers-guide">LIST YOUR PROPERTY</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">GUIDES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">COMMUNITIES IN DUBAI</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">BUYERS GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">SELLERS GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">LANDLORD GUIDE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">MORTGAGE GUIDE</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">SERVICES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">RENTAL SERVICE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">MORTGAGE SERVICE</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">LEGAL SERVICE</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">EUROPEAN PROPERTIES</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">PROPERTIES TO SELL</a>
+              </li>
+            </ul>
+            <h3 class="text-xl font-bold mt-8">ABOUT</h3>
+            <ul class="space-y-1">
+              <li>
+                <a href="/all-listed-europe-properties">ABOUT US</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">CAREER</a>
+              </li>
+              <li>
+                <a href="/all-listed-europe-properties">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div
+        class="font-extralight max-w-6xl mt-8 mx-auto px-4 text-center text-gold-500 text-sm w-full md:mt-12"
+      >
+        <p class="mb-2">
+          <a href="/terms-and-conditions">Terms and Conditions</a> |
+          <a href="/privacy-policy">Privacy Policy</a> |
+          <a href="/cookie-policy">Cookie Policy</a>
+          <a href="/contact">Contact</a>
+        </p>
+        <p class="mb-2">
+          © 2024 Maas & Weber International Real Estate Broker LLC, All rights
+          reserved.
+        </p>
+        <p>
+          A limited liability company with a registered office in Dubai UAE.
+          Registration number: 1123095
+        </p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
