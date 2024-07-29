@@ -3,10 +3,44 @@
 @tailwind utilities;
 
 @layer utilities {
+  .i-icon:hover + span {
+    display: block;
+  }
+
   /* Custom CSS for the dropdown */
   .select-items div:hover,
   .same-as-selected {
     background-color: rgb(185, 154, 69); /* Golden color */
+  }
+
+  input[type="checkbox"] {
+    /* Hide default checkbox */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Create a custom box */
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+    background-color: #fff;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+  input[type="checkbox"]:checked {
+    /* Create the checkmark/indicator (hidden when not checked) */
+    background-color: #fff;
+  }
+  input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    width: 7px;
+    height: 14px;
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
   }
 
   .bg-mwblack-500 {

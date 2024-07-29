@@ -374,38 +374,176 @@
         </div>
       </div>
     </section>
+    <div class="flex items-center justify-center mb-4 mt-4 space-x-4">
+      <div class="flex-grow border-t border-white"></div>
+      <h2 class="font-bold text-3xl text-white text-center whitespace-nowrap">
+        Further Selection
+      </h2>
+      <div class="flex-grow border-t border-white"></div>
+    </div>
     <section class="mt-10 p-5">
       <div class="container mx-auto px-4">
-        <div class="flex items-center justify-center mb-4 space-x-4">
-          <div class="flex-grow border-t border-white"></div>
-          <h2
-            class="font-bold text-3xl text-white text-center whitespace-nowrap"
-          >
-            Further Selection
-          </h2>
-          <div class="flex-grow border-t border-white"></div>
-        </div>
         <section class="py-8">
           <div class="container flex items-center justify-center mx-auto px-4">
-            <div class="flex mr-2 overflow-hidden rounded-md shadow space-x-px">
-              <select class="bg-white border-none p-2 w-40">
-                <option>Community</option>
-              </select>
-              <select class="bg-white border-none p-2 w-40">
-                <option>Status</option>
-              </select>
-              <select class="bg-white border-none p-2 w-40">
-                <option>Property type</option>
-              </select>
-              <select class="bg-white border-none p-2 w-40">
-                <option>Price range</option>
-              </select>
-            </div>
-            <button
-              class="bg-gold-500 text-white px-4 py-2 rounded-md hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-opacity-50"
+            <div
+              class="flex mr-2 rounded-md shadow space-x-px flex-wrap lg:flex-nowrap gap-3 lg:gap-0"
             >
-              Search
-            </button>
+              <div
+                class="relative w-[calc(50%-12px)] sm:w-[calc(33%-12px)] lg:w-auto"
+              >
+                <div
+                  class="bg-white border-none p-2 w-full lg:w-40 relative custom-dropdown-select"
+                >
+                  <p>Community</p>
+                  <img
+                    class="absolute right-[4px] top-[1px]"
+                    src="./images/Chevron Down.svg"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="custom-dropdown hidden absolute top-[37px] left-[-1px] border-[1px] border-solid border-black rounded-lg bg-white z-10 p-3 w-[298px] max-h-[177px] space-y-1 overflow-scroll"
+                >
+                  <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="" />
+                    <span>Custom Checkbox</span>
+                  </label>
+                  <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="" />
+                    <span>Damac Hills</span>
+                  </label>
+                  <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="" />
+                    <span>Dubai Marina</span>
+                  </label>
+                  <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="" />
+                    <span>Jumeirah Beach Residences</span>
+                  </label>
+                  <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="" />
+                    <span>Jumeirah Village Circle</span>
+                  </label>
+                  <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="" />
+                    <span>Palm Jumeirah</span>
+                  </label>
+                </div>
+              </div>
+              <div
+                class="relative w-[calc(50%-12px)] sm:w-[calc(33%-12px)] lg:w-auto"
+              >
+                <div
+                  class="bg-white border-none p-2 w-full lg:w-40 relative custom-dropdown-select"
+                >
+                  <p>Status</p>
+                  <img
+                    class="absolute right-[4px] top-[1px]"
+                    src="./images/Chevron Down.svg"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="custom-dropdown hidden absolute top-[37px] left-[-1px] border-[1px] border-solid border-black rounded-lg bg-white z-10 p-3 w-[298px] max-h-[177px] space-y-1 overflow-scroll"
+                >
+                  <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="" />
+                    <span>Any</span>
+                  </label>
+                  <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="" />
+                    <span>New Builds</span>
+                  </label>
+                  <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="" />
+                    <span>Resale</span>
+                  </label>
+                </div>
+              </div>
+              <div
+                class="relative w-[calc(50%-12px)] sm:w-[calc(33%-12px)] lg:w-auto"
+              >
+                <div
+                  class="bg-white border-none p-2 w-full lg:w-40 relative custom-dropdown-select"
+                >
+                  <p>Property type</p>
+                  <img
+                    class="absolute right-[4px] top-[1px]"
+                    src="./images/Chevron Down.svg"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="custom-dropdown hidden absolute top-[37px] left-[-1px] border-[1px] border-solid border-black rounded-lg bg-white z-10 p-3 w-[298px] max-h-[177px] space-y-1 overflow-scroll"
+                >
+                  <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="" />
+                    <span>Any</span>
+                  </label>
+                  <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="" />
+                    <span>Appartment</span>
+                  </label>
+                  <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="" />
+                    <span>Townhouse</span>
+                  </label>
+                  <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="" />
+                    <span>Villa</span>
+                  </label>
+                  <label class="flex items-center space-x-3">
+                    <input type="checkbox" id="" />
+                    <span>Other</span>
+                  </label>
+                </div>
+              </div>
+              <div
+                class="relative w-[calc(50%-12px)] sm:w-[calc(33%-12px)] lg:w-auto"
+              >
+                <div
+                  class="bg-white border-none p-2 w-full lg:w-40 relative custom-dropdown-select"
+                >
+                  <p>Price range</p>
+                  <img
+                    class="absolute right-[4px] top-[1px]"
+                    src="./images/Chevron Down.svg"
+                    alt=""
+                  />
+                </div>
+
+                <div
+                  class="custom-dropdown hidden absolute top-[37px] left-auto right-0 sm:left-0 lg:left-[-1px] border-[1px] border-solid border-black rounded-lg bg-white z-10 p-3 w-[298px] max-h-[177px] space-y-1 overflow-scroll"
+                >
+                  <div class="flex gap-5">
+                    <div class="text-base text-left font-normal w-full">
+                      <label for="">Min. Price</label>
+                      <br />
+                      <input
+                        class="text-black mt-2 py-2 px-2 rounded-lg w-full border-[1px] border-solid border-black"
+                        type="text"
+                        placeholder="No min."
+                      />
+                    </div>
+                    <div class="text-base text-left font-normal w-full">
+                      <label for="">Max. Price</label>
+                      <br />
+                      <input
+                        class="text-black mt-2 py-2 px-2 rounded-lg w-full border-[1px] border-solid border-black"
+                        type="text"
+                        placeholder="No max."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="bg-gold-500 text-white px-4 py-2 rounded-md hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-opacity-50"
+                style="margin-left: 8px"
+              >
+                Search
+              </button>
+            </div>
           </div>
         </section>
         <div class="gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
@@ -949,7 +1087,7 @@
             <h3 class="text-xl font-bold">GUIDES</h3>
             <ul class="space-y-1">
               <li>
-                <a href="/all-listed-europe-properties">COMMUNITIES IN DUBAI</a>
+                <a href="./communities-dubai.html">COMMUNITIES IN DUBAI</a>
               </li>
               <li>
                 <a href="/all-listed-europe-properties">BUYERS GUIDE</a>
@@ -987,13 +1125,13 @@
             <h3 class="text-xl font-bold mt-8">ABOUT</h3>
             <ul class="space-y-1">
               <li>
-                <a href="/all-listed-europe-properties">ABOUT US</a>
+                <a href="./about.html">ABOUT US</a>
               </li>
               <li>
                 <a href="/all-listed-europe-properties">CAREER</a>
               </li>
               <li>
-                <a href="/all-listed-europe-properties">CONTACT</a>
+                <a href="./contact.html">CONTACT</a>
               </li>
             </ul>
           </div>
@@ -1003,10 +1141,10 @@
         class="font-extralight max-w-6xl mt-8 mx-auto px-4 text-center text-gold-500 text-sm w-full md:mt-12"
       >
         <p class="mb-2">
-          <a href="/terms-and-conditions">Terms and Conditions</a> |
-          <a href="/privacy-policy">Privacy Policy</a> |
-          <a href="/cookie-policy">Cookie Policy</a>
-          <a href="/contact">Contact</a>
+          <a href="./terms-condition.html">Terms and Conditions</a> |
+          <a href="./privacy-policy.html">Privacy Policy</a> |
+          <a href="./cookie-policy.html">Cookie Policy</a>
+          <a href="./contact.html">Contact</a>
         </p>
         <p class="mb-2">
           © 2024 Maas & Weber International Real Estate Broker LLC, All rights

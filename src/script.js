@@ -116,3 +116,49 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+document.addEventListener("click", (e) => {
+  // Check if the click was inside any .custom-dropdown-select
+  const isClickInsideDropdown = e.target.closest(".custom-dropdown-select");
+
+  // If click is outside, hide all dropdowns
+  if (!isClickInsideDropdown) {
+    document.querySelectorAll(".custom-dropdown").forEach((dropdown) => {
+      dropdown.classList.add("hidden");
+    });
+  }
+});
+
+// Handle clicks on .custom-dropdown-select
+document.addEventListener("click", (e) => {
+  if (
+    !e.target.closest(".custom-dropdown-select") &&
+    e.target.parentElement.querySelector(".custom-dropdown")
+  ) {
+    document.querySelectorAll(".custom-dropdown-select").forEach((e) => {
+      e.parentElement.querySelector(".custom-dropdown").style.display = "none";
+    });
+  }
+});
+
+document.querySelectorAll(".custom-dropdown-select").forEach((event) => {
+  event.addEventListener("click", () => {
+    document.querySelectorAll(".custom-dropdown-select").forEach((e) => {
+      if (e !== event) {
+        e.parentElement.querySelector(".custom-dropdown").style.display =
+          "none";
+      }
+    });
+
+    if (
+      event.parentElement.querySelector(".custom-dropdown").style.display ==
+      "block"
+    ) {
+      event.parentElement.querySelector(".custom-dropdown").style.display =
+        "none";
+    } else {
+      event.parentElement.querySelector(".custom-dropdown").style.display =
+        "block";
+    }
+  });
+});

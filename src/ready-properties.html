@@ -8,6 +8,19 @@
     />
     <title>Maas & Weber International Real Estate Broker</title>
     <link href="./output.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
+    <style>
+      input[type="range"]::-webkit-slider-thumb {
+        pointer-events: all;
+        width: 24px;
+        height: 24px;
+        -webkit-appearance: none;
+        /* @apply w-6 h-6 appearance-none pointer-events-auto; */
+      }
+    </style>
   </head>
   <body class="bg-mwblack-500 font-sans text-gray-900">
     <header
@@ -247,45 +260,405 @@
     </section>
     <section class="py-8">
       <div class="container flex items-center justify-center mx-auto px-4">
-        <div class="flex mr-2 overflow-hidden rounded-md shadow space-x-px">
-          <select class="bg-white border-none p-2 w-40">
-            <option>Community</option>
-          </select>
-          <select class="bg-white border-none p-2 w-40">
-            <option>Status</option>
-          </select>
-          <select class="bg-white border-none p-2 w-40">
-            <option>Property type</option>
-          </select>
-          <select class="bg-white border-none p-2 w-40">
-            <option>Price range</option>
-          </select>
-          <select class="bg-white border-none p-2 w-40">
-            <option>Bedrooms</option>
-          </select>
-        </div>
-        <button
-          class="bg-white border-none flex items-center mr-2 p-2 rounded-md w-24"
+        <div
+          class="flex mr-2 rounded-md shadow space-x-px flex-wrap lg:flex-nowrap gap-3 lg:gap-0"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
+          <div
+            class="relative w-[calc(50%-12px)] sm:w-[calc(33%-12px)] lg:w-auto"
           >
-            <path
-              fill-rule="evenodd"
-              d="M6 3a3 3 0 100 6 3 3 0 000-6zM2 6a4 4 0 118 0 4 4 0 01-8 0zm14-3a1 1 0 00-1-1h-3a1 1 0 100 2h2v2a1 1 0 102 0V3zM3 11a1 1 0 011-1h10a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4zM7 15a1 1 0 100-2h6a1 1 0 100 2H7z"
-              clip-rule="evenodd"
-            />
-          </svg>
-          Filters
-        </button>
-        <button
-          class="bg-gold-500 text-white px-4 py-2 rounded-md hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-opacity-50"
-        >
-          Search
-        </button>
+            <div
+              class="bg-white border-none p-2 w-full lg:w-40 relative custom-dropdown-select"
+            >
+              <p>Community</p>
+              <img
+                class="absolute right-[4px] top-[1px]"
+                src="./images/Chevron Down.svg"
+                alt=""
+              />
+            </div>
+            <div
+              class="custom-dropdown hidden absolute top-[37px] left-[-1px] border-[1px] border-solid border-black rounded-lg bg-white z-10 p-3 w-[298px] max-h-[177px] space-y-1 overflow-scroll"
+            >
+              <label class="flex items-center space-x-3">
+                <input type="checkbox" id="" />
+                <span>Custom Checkbox</span>
+              </label>
+              <label class="flex items-center space-x-3">
+                <input type="checkbox" id="" />
+                <span>Damac Hills</span>
+              </label>
+              <label class="flex items-center space-x-3">
+                <input type="checkbox" id="" />
+                <span>Dubai Marina</span>
+              </label>
+              <label class="flex items-center space-x-3">
+                <input type="checkbox" id="" />
+                <span>Jumeirah Beach Residences</span>
+              </label>
+              <label class="flex items-center space-x-3">
+                <input type="checkbox" id="" />
+                <span>Jumeirah Village Circle</span>
+              </label>
+              <label class="flex items-center space-x-3">
+                <input type="checkbox" id="" />
+                <span>Palm Jumeirah</span>
+              </label>
+            </div>
+          </div>
+          <div
+            class="relative w-[calc(50%-12px)] sm:w-[calc(33%-12px)] lg:w-auto"
+          >
+            <div
+              class="bg-white border-none p-2 w-full lg:w-40 relative custom-dropdown-select"
+            >
+              <p>Status</p>
+              <img
+                class="absolute right-[4px] top-[1px]"
+                src="./images/Chevron Down.svg"
+                alt=""
+              />
+            </div>
+            <div
+              class="custom-dropdown hidden absolute top-[37px] left-[-1px] border-[1px] border-solid border-black rounded-lg bg-white z-10 p-3 w-[298px] max-h-[177px] space-y-1 overflow-scroll"
+            >
+              <label class="flex items-center space-x-3">
+                <input type="checkbox" id="" />
+                <span>Any</span>
+              </label>
+              <label class="flex items-center space-x-3">
+                <input type="checkbox" id="" />
+                <span>New Builds</span>
+              </label>
+              <label class="flex items-center space-x-3">
+                <input type="checkbox" id="" />
+                <span>Resale</span>
+              </label>
+            </div>
+          </div>
+          <div
+            class="relative w-[calc(50%-12px)] sm:w-[calc(33%-12px)] lg:w-auto"
+          >
+            <div
+              class="bg-white border-none p-2 w-full lg:w-40 relative custom-dropdown-select"
+            >
+              <p>Property type</p>
+              <img
+                class="absolute right-[4px] top-[1px]"
+                src="./images/Chevron Down.svg"
+                alt=""
+              />
+            </div>
+            <div
+              class="custom-dropdown hidden absolute top-[37px] left-[-1px] border-[1px] border-solid border-black rounded-lg bg-white z-10 p-3 w-[298px] max-h-[177px] space-y-1 overflow-scroll"
+            >
+              <label class="flex items-center space-x-3">
+                <input type="checkbox" id="" />
+                <span>Any</span>
+              </label>
+              <label class="flex items-center space-x-3">
+                <input type="checkbox" id="" />
+                <span>Appartment</span>
+              </label>
+              <label class="flex items-center space-x-3">
+                <input type="checkbox" id="" />
+                <span>Townhouse</span>
+              </label>
+              <label class="flex items-center space-x-3">
+                <input type="checkbox" id="" />
+                <span>Villa</span>
+              </label>
+              <label class="flex items-center space-x-3">
+                <input type="checkbox" id="" />
+                <span>Other</span>
+              </label>
+            </div>
+          </div>
+          <div
+            class="relative w-[calc(50%-12px)] sm:w-[calc(33%-12px)] lg:w-auto"
+          >
+            <div
+              class="bg-white border-none p-2 w-full lg:w-40 relative custom-dropdown-select"
+            >
+              <p>Price range</p>
+              <img
+                class="absolute right-[4px] top-[1px]"
+                src="./images/Chevron Down.svg"
+                alt=""
+              />
+            </div>
+
+            <div
+              class="custom-dropdown hidden absolute top-[37px] left-auto right-0 sm:left-0 lg:left-[-1px] border-[1px] border-solid border-black rounded-lg bg-white z-10 p-3 w-[298px] max-h-[177px] space-y-1 overflow-scroll"
+            >
+              <div class="flex gap-5">
+                <div class="text-base text-left font-normal w-full">
+                  <label for="">Min. Price</label>
+                  <br />
+                  <input
+                    class="text-black mt-2 py-2 px-2 rounded-lg w-full border-[1px] border-solid border-black"
+                    type="text"
+                    placeholder="No min."
+                  />
+                </div>
+                <div class="text-base text-left font-normal w-full">
+                  <label for="">Max. Price</label>
+                  <br />
+                  <input
+                    class="text-black mt-2 py-2 px-2 rounded-lg w-full border-[1px] border-solid border-black"
+                    type="text"
+                    placeholder="No max."
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="relative w-[calc(50%-12px)] sm:w-[calc(33%-12px)] lg:w-auto ml-1"
+          >
+            <button
+              class="bg-white border-none flex items-center mr-2 p-2 rounded-md w-full lg:w-40 relative custom-dropdown-select"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6 3a3 3 0 100 6 3 3 0 000-6zM2 6a4 4 0 118 0 4 4 0 01-8 0zm14-3a1 1 0 00-1-1h-3a1 1 0 100 2h2v2a1 1 0 102 0V3zM3 11a1 1 0 011-1h10a1 1 0 011 1v4a1 1 0 01-1 1H4a1 1 0 01-1-1v-4zM7 15a1 1 0 100-2h6a1 1 0 100 2H7z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              Filters
+            </button>
+
+            <div
+              class="custom-dropdown hidden absolute top-[37px] left-0 lg:left-[-251px] border-[1px] border-solid border-black rounded-lg bg-white z-10 py-5 px-4 w-[345px] max-h-[277px] space-y-1 overflow-scroll"
+            >
+              <div class="justify-center items-center space-y-3">
+                <p class="text-gold-500 text-xl">Filter your results</p>
+                <div
+                  x-data="range()"
+                  x-init="mintrigger(); maxtrigger()"
+                  class="relative max-w-xl w-full pr-3"
+                >
+                  <div class="flex justify-between items-center">
+                    <div class="mb-4">
+                      <label for="">Area Size</label>
+                      <br />
+                      <input
+                        type="text"
+                        maxlength="5"
+                        x-on:input="mintrigger"
+                        x-model="minprice"
+                        class="text-center border-none outline-none w-7"
+                        readonly
+                      />
+                    </div>
+                    <div>
+                      <label for=""> Sqft </label>
+                      <br />
+                      <input
+                        type="text"
+                        maxlength="5"
+                        x-on:input="maxtrigger"
+                        x-model="maxprice"
+                        class="text-center border-none outline-none w-7"
+                        readonly
+                      />
+                    </div>
+                  </div>
+                  <div class="pr-3">
+                    <input
+                      type="range"
+                      step="5"
+                      x-bind:min="min"
+                      x-bind:max="max"
+                      x-on:input="mintrigger"
+                      x-model="minprice"
+                      class="absolute pointer-events-none appearance-none z-20 h-2 w-[90%] opacity-0 cursor-pointer"
+                    />
+
+                    <input
+                      type="range"
+                      step="5"
+                      x-bind:min="min"
+                      x-bind:max="max"
+                      x-on:input="maxtrigger"
+                      x-model="maxprice"
+                      class="absolute pointer-events-none appearance-none z-20 h-2 w-[90%] opacity-0 cursor-pointer"
+                    />
+
+                    <div class="relative z-10 h-[2px]">
+                      <div
+                        class="absolute z-10 left-0 right-0 bottom-0 top-0 rounded-md bg-gray-200"
+                      ></div>
+
+                      <div
+                        class="absolute z-20 top-0 bottom-0 rounded-md bg-black"
+                        x-bind:style="'right:'+maxthumb+'%; left:'+minthumb+'%'"
+                      ></div>
+
+                      <div
+                        class="absolute z-30 w-4 h-4 top-0 left-0 bg-black rounded-full -mt-2 -ml-1"
+                        x-bind:style="'left: '+minthumb+'%'"
+                      ></div>
+
+                      <div
+                        class="absolute z-30 w-4 h-4 top-0 right-0 bg-black rounded-full -mt-2 -mr-3"
+                        x-bind:style="'right: '+maxthumb+'%'"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p>Amenities</p>
+                  <div class="flex flex-wrap justify-between gap-1">
+                    <label
+                      class="flex items-center space-x-3 text-sm w-[calc(50%-4px)]"
+                    >
+                      <input type="checkbox" id="" />
+                      <span>All Properties</span>
+                    </label>
+                    <label
+                      class="flex items-center space-x-3 text-sm w-[calc(50%-4px)]"
+                    >
+                      <input type="checkbox" id="" />
+                      <span>Garden</span>
+                    </label>
+                    <label
+                      class="flex items-center space-x-3 text-sm w-[calc(50%-4px)]"
+                    >
+                      <input type="checkbox" id="" />
+                      <span>Air-conditioning</span>
+                    </label>
+                    <label
+                      class="flex items-center space-x-3 text-sm w-[calc(50%-4px)]"
+                    >
+                      <input type="checkbox" id="" />
+                      <span>Garage</span>
+                    </label>
+                    <label
+                      class="flex items-center space-x-3 text-sm w-[calc(50%-4px)]"
+                    >
+                      <input type="checkbox" id="" />
+                      <span>Balcony</span>
+                    </label>
+                    <label
+                      class="flex items-center space-x-3 text-sm w-[calc(50%-4px)]"
+                    >
+                      <input type="checkbox" id="" />
+                      <span>Pool/Sea/Lake View</span>
+                    </label>
+                    <label
+                      class="flex items-center space-x-3 text-sm w-[calc(50%-4px)]"
+                    >
+                      <input type="checkbox" id="" />
+                      <span>Built-in-kitchen</span>
+                    </label>
+                    <label
+                      class="flex items-center space-x-3 text-sm w-[calc(50%-4px)]"
+                    >
+                      <input type="checkbox" id="" />
+                      <span>Swimming pool</span>
+                    </label>
+                    <label
+                      class="flex items-center space-x-3 text-sm w-[calc(50%-4px)]"
+                    >
+                      <input type="checkbox" id="" />
+                      <span>Fitness Facility</span>
+                    </label>
+                    <label
+                      class="flex items-center space-x-3 text-sm w-[calc(50%-4px)]"
+                    >
+                      <input type="checkbox" id="" />
+                      <span>Waterfront</span>
+                    </label>
+                  </div>
+
+                  <div class="flex mb-4 mt-9">
+                    <div class="w-[calc(50%-4px)]">
+                      <p class="text-sm mb-1">Furnishing</p>
+                      <label class="flex items-center space-x-3 text-sm">
+                        <input type="checkbox" id="" />
+                        <span>Furnished only</span>
+                      </label>
+                    </div>
+                    <div class="w-[calc(50%-4px)]">
+                      <p class="text-sm flex gap-[2px] mb-1 relative">
+                        Virtual viewing
+                        <svg
+                          class="i-icon"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlns:xlink="http://www.w3.org/1999/xlink"
+                        >
+                          <rect
+                            width="20"
+                            height="20"
+                            fill="url(#pattern0_226_202)"
+                          />
+                          <defs>
+                            <pattern
+                              id="pattern0_226_202"
+                              patternContentUnits="objectBoundingBox"
+                              width="1"
+                              height="1"
+                            >
+                              <use
+                                xlink:href="#image0_226_202"
+                                transform="scale(0.01)"
+                              />
+                            </pattern>
+                            <image
+                              id="image0_226_202"
+                              width="100"
+                              height="100"
+                              xlink:href="data:image/png;base64,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"
+                            />
+                          </defs>
+                        </svg>
+                        <span
+                          class="text-xs absolute right-0 top-[-21px] p-[2px] rounded-md bg-gray-100 hidden"
+                          >Lorem ipsum dolor sit</span
+                        >
+                      </p>
+                      <label class="flex items-center space-x-3 text-sm">
+                        <input type="checkbox" id="" />
+                        <span>Virtual tour available only</span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <p>Property Status</p>
+                  <div class="space-y-1">
+                    <label class="flex items-center space-x-3 text-sm">
+                      <input type="checkbox" id="" />
+                      <span>Any</span>
+                    </label>
+                    <label class="flex items-center space-x-3">
+                      <input type="checkbox" id="" />
+                      <span>Vacant on transfer</span>
+                    </label>
+                    <label class="flex items-center space-x-3">
+                      <input type="checkbox" id="" />
+                      <span>Rented</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="bg-gold-500 text-white px-4 py-2 rounded-md hover:bg-gold-600 focus:outline-none focus:ring-2 focus:ring-gold-500 focus:ring-opacity-50"
+          >
+            Search
+          </button>
+        </div>
       </div>
     </section>
     <section class="py-12">
@@ -2380,7 +2753,7 @@
             <h3 class="text-xl font-bold">GUIDES</h3>
             <ul class="space-y-1">
               <li>
-                <a href="/all-listed-europe-properties">COMMUNITIES IN DUBAI</a>
+                <a href="./communities-dubai.html">COMMUNITIES IN DUBAI</a>
               </li>
               <li>
                 <a href="/all-listed-europe-properties">BUYERS GUIDE</a>
@@ -2418,13 +2791,13 @@
             <h3 class="text-xl font-bold mt-8">ABOUT</h3>
             <ul class="space-y-1">
               <li>
-                <a href="/all-listed-europe-properties">ABOUT US</a>
+                <a href="./about.html">ABOUT US</a>
               </li>
               <li>
                 <a href="/all-listed-europe-properties">CAREER</a>
               </li>
               <li>
-                <a href="/all-listed-europe-properties">CONTACT</a>
+                <a href="./contact.html">CONTACT</a>
               </li>
             </ul>
           </div>
@@ -2434,10 +2807,10 @@
         class="font-extralight max-w-6xl mt-8 mx-auto px-4 text-center text-gold-500 text-sm w-full md:mt-12"
       >
         <p class="mb-2">
-          <a href="/terms-and-conditions">Terms and Conditions</a> |
-          <a href="/privacy-policy">Privacy Policy</a> |
-          <a href="/cookie-policy">Cookie Policy</a>
-          <a href="/contact">Contact</a>
+          <a href="./terms-condition.html">Terms and Conditions</a> |
+          <a href="./privacy-policy.html">Privacy Policy</a> |
+          <a href="./cookie-policy.html">Cookie Policy</a>
+          <a href="./contact.html">Contact</a>
         </p>
         <p class="mb-2">
           © 2024 Maas & Weber International Real Estate Broker LLC, All rights
@@ -2449,6 +2822,30 @@
         </p>
       </div>
     </footer>
+    <script>
+      function range() {
+        return {
+          minprice: 30,
+          maxprice: 120,
+          min: 30,
+          max: 120,
+          minthumb: 30,
+          maxthumb: 0,
+
+          mintrigger() {
+            this.minprice = Math.min(this.minprice, this.maxprice - 5);
+            this.minthumb =
+              ((this.minprice - this.min) / (this.max - this.min)) * 100;
+          },
+
+          maxtrigger() {
+            this.maxprice = Math.max(this.maxprice, this.minprice + 5);
+            this.maxthumb =
+              100 - ((this.maxprice - this.min) / (this.max - this.min)) * 100;
+          },
+        };
+      }
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
